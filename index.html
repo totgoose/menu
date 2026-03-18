@@ -63,6 +63,8 @@
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .header-logo {
@@ -71,6 +73,7 @@
             text-decoration: none;
             color: #fff;
             transition: opacity 0.3s ease;
+            flex-shrink: 0;
         }
 
         .header-logo:hover {
@@ -78,14 +81,15 @@
         }
 
         .logo-image-1 {
-           width: 200px;
-            height: 175px;
+            width: 80px;
+            height: 70px;
             margin-right: 5px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
+        
         .logo-image-2 {
-           width: 498px;
-            height: 108px;
+            width: 200px;
+            height: 43px;
             margin-right: 5px;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
@@ -183,7 +187,79 @@
             transform: translateY(-2px);
         }
 
-       .wl-container {
+        /* Mobile Header Styles */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 12px 4%;
+                gap: 12px;
+            }
+
+            .logo-image-1 {
+                width: 60px;
+                height: 52px;
+            }
+
+            .logo-image-2 {
+                width: 150px;
+                height: 32px;
+            }
+
+            .header-contacts {
+                text-align: center;
+                width: 100%;
+            }
+
+            .phone-link,
+            .address-link {
+                justify-content: center;
+                font-size: 14px;
+            }
+
+            .social-icons {
+                justify-content: center;
+                margin-top: 6px;
+            }
+
+            .social-icons a {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 10px 3%;
+            }
+
+            .logo-image-1 {
+                width: 50px;
+                height: 44px;
+            }
+
+            .logo-image-2 {
+                width: 120px;
+                height: 26px;
+            }
+
+            .phone-link,
+            .address-link {
+                font-size: 13px;
+            }
+
+            .social-icons {
+                gap: 8px;
+            }
+
+            .social-icons a {
+                width: 26px;
+                height: 26px;
+                font-size: 13px;
+            }
+        }
+
+        .wl-container {
             font-family: 'Georgia', 'Times New Roman', serif;
             max-width: 1000px;
             margin: 0 auto;
@@ -193,25 +269,27 @@
             line-height: 1.5;
             box-sizing: border-box;
         }
-         .hr-shelf {
-	        margin: -30px auto 40px;
-	        height: 50px;
-	        border: none;
-	        border-bottom: 1px solid #2e8f6f;
-	        box-shadow: 0 20px 20px -20px #2e8f6f;
-	        width: 70%;    
-	        margin-bottom: 40px;
-         }
-         .hr-shelf-1 {
-	        margin: left ;
+        
+        .hr-shelf {
+            margin: -30px auto 40px;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid #2e8f6f;
+            box-shadow: 0 20px 20px -20px #2e8f6f;
+            width: 70%;    
+            margin-bottom: 40px;
+        }
+        
+        .hr-shelf-1 {
+            margin: left;
             margin-top: -50px;
-	        height: 50px;
-	        border: none;
-	        border-bottom: 1px solid #2e8f6f;
-	        box-shadow: 0 20px 20px -20px #2e8f6f;
-	        width: 60%;    
-	        
-         }
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid #2e8f6f;
+            box-shadow: 0 20px 20px -20px #2e8f6f;
+            width: 60%;    
+        }
+        
         .wl-main-title {
             text-align: center;
             font-size: 36px;
@@ -220,11 +298,10 @@
             margin-top: 40px;           
             margin-bottom: 40px;
             color: #fff;
-           
         }
 
         .wl-section-title {
-             font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             text-transform: uppercase;
             font-size: 24px;
             letter-spacing: 2px;
@@ -264,7 +341,6 @@
             gap: 10px 20px;
             margin-bottom: 5px;
             padding-bottom: 5px;
-           
         }
 
         .wl-grid:last-child {
@@ -283,13 +359,12 @@
         }
 
         .wl-details {
-            
             font-size: 15px;
-            color: #666;
+            color: #fff;
             font-style: italic;
-             border-left: 1px solid #2e8f6f;
-             padding-left: 10px;
-             margin-top: 2px;
+            border-left: 1px solid #2e8f6f;
+            padding-left: 10px;
+            margin-top: 2px;
         }
 
         .wl-price {
@@ -363,9 +438,9 @@
     <!-- Header -->
     <header class="header">
         <a href="https://totgoose.ru" class="header-logo">
-		<img src="https://totgoose.github.io/img/goose_logo.png" alt="Гусь" class="logo-image-1">
-         </a>
-         <img src="https://totgoose.github.io/img/goose_silver_t.png" alt="Гусь" class="logo-image-2">
+            <img src="https://totgoose.github.io/img/goose_logo.png" alt="Гусь" class="logo-image-1">
+        </a>
+        <img src="https://totgoose.github.io/img/goose_silver_t.png" alt="Гусь" class="logo-image-2">
 
         <div class="header-contacts">
             <a href="tel:+79999262688" class="phone-link">
@@ -395,12 +470,8 @@
             </div>
         </div>
     </header>
-    
-    
 
     <div class="wl-container">
-        
-        
         <h1 class="wl-main-title">МЕНЮ ТОТ ЕЩЁ ГУСЬ</h1>
         <hr class="hr-shelf">
         <img src="http://Тот-Ещё-Гусь.рф/img/goose_logo.png" alt="Гусь" style="display: block; margin: 0 auto 20px auto; max-width: 200px;">
@@ -409,7 +480,7 @@
         <div class="wl-grid">
             <div class="wl-info">
                 <span class="wl-name">Ребро</span></a>
-                <span class="wl-details">Копченое на ольховой стружке говяжье ребро, приготовленное на низкой <br>температуре.Подается с соусом из розового перца и пюре из пастернака</span><hr class="hr-shelf-1">
+                <span class="wl-details">Копченое на ольховой стружке говяжье ребро, приготовленное на низкой температуре. Подается с соусом из розового перца и пюре из пастернака</span><hr class="hr-shelf-1">
             </div>
             <div class="wl-price">2200 ₽</div>
         </div>
@@ -417,7 +488,7 @@
         <div class="wl-grid">
             <div class="wl-info">
                 <span class="wl-name">Оссобуко</span></a>
-                <span class="wl-details">Стейк из поперечного разреза говяжьей голени с мозговой косточкой, приготовленный на низкой <br>температуре.Подаётся с соусом и гарниром из жаренного фенхеля</span><hr class="hr-shelf-1">
+                <span class="wl-details">Стейк из поперечного разреза говяжьей голени с мозговой косточкой, приготовленный на низкой температуре. Подаётся с соусом и гарниром из жаренного фенхеля</span><hr class="hr-shelf-1">
             </div>
             <div class="wl-price">2200 ₽</div>
         </div>
@@ -425,7 +496,7 @@
         <div class="wl-grid">
             <div class="wl-info">
                 <span class="wl-name">Шея ягнёнка</span></a>
-                <span class="wl-details">Томлённая на низкой температуре с солодовым соусом и бренди. <br>Подаётся с жареным луком порей и бейби-картофелем (на двоих)</span><hr class="hr-shelf-1">
+                <span class="wl-details">Томлённая на низкой температуре с солодовым соусом и бренди. Подаётся с жареным луком порей и бейби-картофелем (на двоих)</span><hr class="hr-shelf-1">
             </div>
             <div class="wl-price">3900 ₽</div>
         </div>
@@ -621,7 +692,7 @@
         <div class="wl-grid">
             <div class="wl-info">
                 <span class="wl-name">Говяжий ростбиф</span></a>
-                <span class="wl-details">Слайсы вырезки на низкой температуре с печеным чесноком,<br> вялеными томатами, горчичным соусом на кремовом сыре</span><hr class="hr-shelf-1">
+                <span class="wl-details">Слайсы вырезки на низкой температуре с печеным чесноком, вялеными томатами, горчичным соусом на кремовом сыре</span><hr class="hr-shelf-1">
             </div>
             <div class="wl-price">980 ₽</div>
         </div>
@@ -879,7 +950,7 @@
         <div class="wl-grid">
             <div class="wl-info">
                 <span class="wl-name">Лимонад Цитрусовый 300мл</span></a>
-                <span class="wl-details">Освежающий прохладительный напиток с ярким кисло-сладким вкусом цитрусовых фруктов. <br>Подаётся охлаждённым, идеально утоляет жажду</span><hr class="hr-shelf-1">
+                <span class="wl-details">Освежающий прохладительный напиток с ярким кисло-сладким вкусом цитрусовых фруктов. Подаётся охлаждённым, идеально утоляет жажду</span><hr class="hr-shelf-1">
             </div>
             <div class="wl-price">390 ₽</div>
         </div>
