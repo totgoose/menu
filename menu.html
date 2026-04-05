@@ -1,0 +1,3221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тот Ещё Гусь — Гастрокафе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://Тот-Ещё-Гусь.РФ/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #c9a86c;
+            --accent: #8b0000;
+            --bg: #faf8f5;
+            --card-bg: #ffffff;
+            --text: #2d2d2d;
+            --text-light: #666666;
+            --border: #e8e4df;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+                       .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .logo-image {
+            width: 177px;
+            height: 230px;
+            margin-right: 10px;
+        }
+
+        .header-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header-nav a {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 30px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .header-nav a:hover {
+            color: #d9534f;
+        }
+
+        .header-contacts {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .phone-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .phone-link i {
+            color: #d9534f;
+        }
+
+        .address-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .address-link:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 8px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #d9534f;
+        }
+
+        @media (max-width: 960px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .header-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-contact {
+            text-align: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-contact {
+            text-align: right;
+        }
+
+        .header-contact a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .header-contact p {
+            font-size: 0.8rem;
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 80px;
+            z-index: 999;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .nav-scroll {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+            scrollbar-width: none;
+        }
+
+        .nav-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-btn {
+            flex-shrink: 0;
+            padding: 0.6rem 1.2rem;
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--text);
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 140px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .section-count {
+            background: var(--secondary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Dish Card */
+        .dish-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dish-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .dish-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8e4df 100%);
+        }
+
+        .dish-content {
+            padding: 1.25rem;
+        }
+
+        .dish-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dish-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        .dish-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        .dish-details {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+        }
+
+        .dish-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .dish-tag {
+            padding: 0.25rem 0.6rem;
+            background: var(--bg);
+            border-radius: 12px;
+            color: var(--text-light);
+        }
+
+        .dish-tag.wine {
+            background: #f8f4f0;
+            color: #8b4513;
+        }
+
+        .dish-tag.calories {
+            background: #f0f8f4;
+            color: #2d5a3d;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlide 0.3s ease;
+        }
+
+        @keyframes modalSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: background 0.3s;
+        }
+
+        .modal-close:hover {
+            background: white;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .modal-content {
+            padding: 2rem;
+        }
+
+        .modal-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .modal-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-section-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-section-content {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text);
+        }
+
+        .modal-facts {
+            list-style: none;
+        }
+
+        .modal-facts li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .modal-facts li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .modal-info-item {
+            padding: 0.75rem;
+            background: var(--bg);
+            border-radius: 8px;
+        }
+
+        .modal-info-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .modal-info-value {
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            text-align: center;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .footer-section p, .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 2rem 1.5rem 0;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .footer-section a, .footer-section p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .header-contact {
+                text-align: center;
+            }
+
+            .logo {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo-text {
+                text-align: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            nav {
+                top: auto;
+            }
+        }
+
+        /* Loading animation */
+        .dish-card {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="https://totgoose.ru" class="header-logo">
+            <img src="https://totgoose.github.io/img/goose.png" alt="Гусь" class="logo-image">
+        </a>
+
+        <nav class="header-nav">
+            <ul>
+                <li><a href="https://totgoose.github.io/menu.html" target="_blank">МЕНЮ | </a></li>
+                <li><a href="https://totgoose.github.io/menu_dinner.html" target="_blank">ОБЕД | </a></li>
+                <li><a href="https://totgoose.github.io/wines.html" target="_blank">ВИННАЯ КАРТА</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-contacts">
+            <a href="tel:+79999262688" class="phone-link">
+                <i class="fas fa-phone-alt"></i>
+                +7 (9999) 26-26-88
+            </a>
+            
+            <a href="https://yandex.ru/maps/org/tot_yeshchyo_gus/240625638253/" target="_blank" class="address-link">
+                <i class="fas fa-map-marker-alt" style='font-size:24px ; color:red'></i>
+                Мск , Валовая , 26
+            </a>
+
+            <div class="social-icons">
+                <a href="https://vk.com/totgooserestocafe" target="_blank" title="VK">
+                    <i class='fab fa-vk' style='font-size:30px;color:red'></i>
+                </a>
+                <a href="https://t.me/totgooserestocafe" target="_blank" title="Telegram">
+                    <i class='fab fa-telegram-plane' style='font-size:30px;color:red'></i>
+                </a>
+                <a href="https://www.totgoose.ru/blog" target="_blank" title="Blog">
+                   <i class='fas fa-blog' style='font-size:30px;color:red'></i>
+                </a>
+                <a href="https://www.totgoose.ru" target="_blank" title="totgoose.ru">
+                   <i class="fa fa-internet-explorer" style="font-size:30px;color:red"></i>
+                </a>
+                <a href="mailto:totgoose@ya.ru" target="_blank" title="totgoose@ya.ru">
+                  <i class="fa fa-envelope" style="font-size:30px;color:red"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <div class="nav-scroll">
+                <button class="nav-btn active" data-section="all">Все блюда</button>
+                <button class="nav-btn" data-section="Горячие блюда">Горячие блюда</button>
+                <button class="nav-btn" data-section="Тапасы и брускетты">Тапасы и брускетты</button>
+                <button class="nav-btn" data-section="Холодные закуски">Холодные закуски</button>
+                <button class="nav-btn" data-section="Сырое мясо и рыба">Сырое мясо и рыба</button>
+                <button class="nav-btn" data-section="Горячие закуски">Горячие закуски</button>
+                <button class="nav-btn" data-section="Супы">Супы</button>
+                <button class="nav-btn" data-section="Основные блюда">Основные блюда</button>
+                <button class="nav-btn" data-section="Постное меню">Постное меню</button>
+                <button class="nav-btn" data-section="Десерты">Десерты</button>
+                <button class="nav-btn" data-section="Безалкогольные напитки">Безалкогольные напитки</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section" id="section-Горячие-блюда">
+            <div class="section-header">
+                <h2 class="section-title">Горячие блюда</h2>
+                <span class="section-count">13</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(0)" style="animation-delay: 0.0s">
+                    <img class="dish-image" src="https://totgoose.github.io/rebro.jpg" alt="Ребро" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Ребро</h3>
+                            <span class="dish-price">2200 ₽</span>
+                        </div>
+                        <p class="dish-details">Копченое на ольховой стружке говяжье ребро, приготовленное на низкой температуре. Подается с соусом из розового перца и пюре из пастернака</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Каберне Совиньон, Мерло</span>
+                            <span class="dish-tag calories">~450 ккал</span>
+                            <span class="dish-tag">Копчение + Су-вид</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(1)" style="animation-delay: 0.05s">
+                    <img class="dish-image" src="https://totgoose.github.io/ossobuko.jpg" alt="Оссобуко" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Оссобуко</h3>
+                            <span class="dish-price">2200 ₽</span>
+                        </div>
+                        <p class="dish-details">Стейк из поперечного разреза говяжьей голени с мозговой косточкой, приготовленный на низкой температуре. Подаётся с соусом и гарниром из жаренного фенхеля</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Бароло, Кьянти Классико</span>
+                            <span class="dish-tag calories">~380 ккал</span>
+                            <span class="dish-tag">Бразирование (тушение)</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(2)" style="animation-delay: 0.1s">
+                    <img class="dish-image" src="https://totgoose.github.io/sheya-yagnyonka.jpg" alt="Шея ягнёнка" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Шея ягнёнка</h3>
+                            <span class="dish-price">3900 ₽</span>
+                        </div>
+                        <p class="dish-details">Томлённая на низкой температуре с солодовым соусом и бренди. Подаётся с жареным луком порей и бейби-картофелем (на двоих)</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Шато Неф-дю-Пап, Сира</span>
+                            <span class="dish-tag calories">~520 ккал</span>
+                            <span class="dish-tag">Су-вид / Томление</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(3)" style="animation-delay: 0.15000000000000002s">
+                    <img class="dish-image" src="https://totgoose.github.io/vymya-gril.jpg" alt="Вымя гриль" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Вымя гриль</h3>
+                            <span class="dish-price">1450 ₽</span>
+                        </div>
+                        <p class="dish-details">Жареное говяжье вымя с перечным соусом и цветной капустой</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Пино Нуар, Цвайгельт</span>
+                            <span class="dish-tag calories">~280 ккал</span>
+                            <span class="dish-tag">Гриль</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(4)" style="animation-delay: 0.2s">
+                    <img class="dish-image" src="https://totgoose.github.io/yazyk-molochnogo-telenka.jpg" alt="Язык молочного теленка" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Язык молочного теленка</h3>
+                            <span class="dish-price">990 ₽</span>
+                        </div>
+                        <p class="dish-details">Глазированный язык теленка с опаленным романо и луком-конфи</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Божоле, Гаме</span>
+                            <span class="dish-tag calories">~220 ккал</span>
+                            <span class="dish-tag">Томление + Глазировка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(5)" style="animation-delay: 0.25s">
+                    <img class="dish-image" src="https://totgoose.github.io/kot-dyu-byof.jpg" alt="Кот дю Бёф" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Кот дю Бёф</h3>
+                            <span class="dish-price">3950 ₽</span>
+                        </div>
+                        <p class="dish-details">Говяжий антрекот на кости с томатным чимичури и печёным чесноком (на двоих)</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Бордо, Мальбек</span>
+                            <span class="dish-tag calories">~650 ккал</span>
+                            <span class="dish-tag">Гриль + Духовка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(6)" style="animation-delay: 0.30000000000000004s">
+                    <img class="dish-image" src="https://totgoose.github.io/telyachiy-zheludok-so-smorchkami.jpg" alt="Телячий желудок со сморчками" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Телячий желудок со сморчками</h3>
+                            <span class="dish-price">1250 ₽</span>
+                        </div>
+                        <p class="dish-details">Желудок, томленный в грибном бульоне, со сморчками в соусе из мадеры</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Кьянти, Санджовезе</span>
+                            <span class="dish-tag calories">~190 ккал</span>
+                            <span class="dish-tag">Томление</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(7)" style="animation-delay: 0.35000000000000003s">
+                    <img class="dish-image" src="https://totgoose.github.io/pochki-yagnenka-v-kherese.jpg" alt="Почки ягненка в хересе" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Почки ягненка в хересе</h3>
+                            <span class="dish-price">950 ₽</span>
+                        </div>
+                        <p class="dish-details">Почки в хересе Pedro Ximenez и солодовом соусе со спагетти из цуккини</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Херес Амонтильядо, Олоросо</span>
+                            <span class="dish-tag calories">~210 ккал</span>
+                            <span class="dish-tag">Жарка + Деглазировка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(8)" style="animation-delay: 0.4s">
+                    <img class="dish-image" src="https://totgoose.github.io/kosti.jpg" alt="Кости" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Кости</h3>
+                            <span class="dish-price">1750 ₽</span>
+                        </div>
+                        <p class="dish-details">«Сахарная» мозговая говяжья кость, запечённая с розмарином и чесноком</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Мальбек, Шираз</span>
+                            <span class="dish-tag calories">~350 ккал</span>
+                            <span class="dish-tag">Запекание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(9)" style="animation-delay: 0.45s">
+                    <img class="dish-image" src="https://totgoose.github.io/barani-yaytsa-s-sousom-subiz.jpg" alt="Бараньи яйца с соусом Субиз" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Бараньи яйца с соусом Субиз</h3>
+                            <span class="dish-price">980 ₽</span>
+                        </div>
+                        <p class="dish-details">Семенники ягненка, жареные с розмарином и чесноком, с соусом Субиз и петрушкой-фри</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Гренаш, Темпранильо</span>
+                            <span class="dish-tag calories">~240 ккал</span>
+                            <span class="dish-tag">Жарка + Соус</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(10)" style="animation-delay: 0.5s">
+                    <img class="dish-image" src="https://totgoose.github.io/steyk-iz-govyazhey-pecheni.jpg" alt="Стейк из говяжьей печени" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Стейк из говяжьей печени</h3>
+                            <span class="dish-price">1350 ₽</span>
+                        </div>
+                        <p class="dish-details">Говяжья печень гриль Medium Rare с лимонным луком и медово-горчичным соусом</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Цвайгельт, Бургундское красное</span>
+                            <span class="dish-tag calories">~180 ккал</span>
+                            <span class="dish-tag">Гриль / Жарка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(11)" style="animation-delay: 0.55s">
+                    <img class="dish-image" src="https://totgoose.github.io/utinaya-grudka-magre.jpg" alt="Утиная грудка Магре" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Утиная грудка Магре</h3>
+                            <span class="dish-price">1150 ₽</span>
+                        </div>
+                        <p class="dish-details">Жареная утиная грудка по-французски с бейби морковкой и цитрусовым соусом</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Пино Нуар, Божоле</span>
+                            <span class="dish-tag calories">~320 ккал</span>
+                            <span class="dish-tag">Жарка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(12)" style="animation-delay: 0.6000000000000001s">
+                    <img class="dish-image" src="https://totgoose.github.io/ryabchik.jpg" alt="Рябчик" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Рябчик</h3>
+                            <span class="dish-price">1900 ₽</span>
+                        </div>
+                        <p class="dish-details">Целая птичка почти без костей со спагетти из корня сельдерея</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Бургундия, Пино Нуар</span>
+                            <span class="dish-tag calories">~160 ккал</span>
+                            <span class="dish-tag">Запекание</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Тапасы-и-брускетты">
+            <div class="section-header">
+                <h2 class="section-title">Тапасы и брускетты</h2>
+                <span class="section-count">6</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(13)" style="animation-delay: 0.65s">
+                    <img class="dish-image" src="https://totgoose.github.io/kreker-s-anchousom-i-tsukkini-s-myagkim-syrom.jpg" alt="Крекер с анчоусом и цуккини с мягким сыром" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Крекер с анчоусом и цуккини с мягким сыром</h3>
+                            <span class="dish-price">140 ₽</span>
+                        </div>
+                        <p class="dish-details"> Хрустящий крекер с солёной рыбой, свежими кабачками и нежным сыром </p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Альбариньо, Верментино</span>
+                            <span class="dish-tag calories">~120 ккал</span>
+                            <span class="dish-tag">Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(14)" style="animation-delay: 0.7000000000000001s">
+                    <img class="dish-image" src="https://totgoose.github.io/kreker-s-syrnym-mussom-iz-paltusa-i-tuntsa-i-shchuchey-ikroy.jpg" alt="Крекер с сырным муссом из палтуса и тунца и щучьей икрой" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Крекер с сырным муссом из палтуса и тунца и щучьей икрой</h3>
+                            <span class="dish-price">140 ₽</span>
+                        </div>
+                        <p class="dish-details">Хрустящая основа с воздушным рыбным кремом и красной икрой</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Совиньон Блан, Рислинг</span>
+                            <span class="dish-tag calories">~140 ккал</span>
+                            <span class="dish-tag">Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(15)" style="animation-delay: 0.75s">
+                    <img class="dish-image" src="https://totgoose.github.io/brusketta-lukom-konfi-i-myagkim-syrom.jpg" alt="Брускетта луком конфи и мягким сыром" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Брускетта луком конфи и мягким сыром</h3>
+                            <span class="dish-price">420 ₽</span>
+                        </div>
+                        <p class="dish-details">Поджаренный багет с карамелизированным луком и сливочным сыром </p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Пино Гриджио, Кортезе</span>
+                            <span class="dish-tag calories">~220 ккал</span>
+                            <span class="dish-tag">Томление + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(16)" style="animation-delay: 0.8s">
+                    <img class="dish-image" src="https://totgoose.github.io/brusketta-s-opalyonnym-tuntsom.jpg" alt="Брускетта с опалённым тунцом" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Брускетта с опалённым тунцом</h3>
+                            <span class="dish-price">680 ₽</span>
+                        </div>
+                        <p class="dish-details">Тост с слегка обжаренным свежим тунцом   </p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Розе Прованс, Гевюрцтраминер</span>
+                            <span class="dish-tag calories">~280 ккал</span>
+                            <span class="dish-tag">Обжарка + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(17)" style="animation-delay: 0.8500000000000001s">
+                    <img class="dish-image" src="https://totgoose.github.io/brusketta-s-gusem.jpg" alt="Брускетта с гусем" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Брускетта с гусем</h3>
+                            <span class="dish-price">890 ₽</span>
+                        </div>
+                        <p class="dish-details">Томленный в хересе гусь, вяленые томаты, апельсиновый конфитюр на бриошь</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Рислинг, Пино Блан</span>
+                            <span class="dish-tag calories">~350 ккал</span>
+                            <span class="dish-tag">Томление + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(18)" style="animation-delay: 0.9s">
+                    <img class="dish-image" src="https://totgoose.github.io/utinye-susi-4-sht.jpg" alt="Утиные «суси» (4 шт.)" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Утиные «суси» (4 шт.)</h3>
+                            <span class="dish-price">590 ₽</span>
+                        </div>
+                        <p class="dish-details">Тонкие слайсы 12-дневной вяленой утиной грудки на сушеной черной сливе</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Гевюрцтраминер, Мускат</span>
+                            <span class="dish-tag calories">~210 ккал</span>
+                            <span class="dish-tag">Вяление + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Холодные-закуски">
+            <div class="section-header">
+                <h2 class="section-title">Холодные закуски</h2>
+                <span class="section-count">8</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(19)" style="animation-delay: 0.9500000000000001s">
+                    <img class="dish-image" src="https://totgoose.github.io/pate-iz-utinoy-pecheni-s-fua-gra.jpg" alt="Пате из утиной печени с Фуа-гра" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Пате из утиной печени с Фуа-гра</h3>
+                            <span class="dish-price">950 ₽</span>
+                        </div>
+                        <p class="dish-details">С луком конфи, томлёном в утином жиру</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Сотерн, Токай</span>
+                            <span class="dish-tag calories">~410 ккал</span>
+                            <span class="dish-tag">Запекание + Томление</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(20)" style="animation-delay: 1.0s">
+                    <img class="dish-image" src="https://totgoose.github.io/pashtet-iz-govyazhey-pecheni.jpg" alt="Паштет из говяжьей печени" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Паштет из говяжьей печени</h3>
+                            <span class="dish-price">560 ₽</span>
+                        </div>
+                        <p class="dish-details">Со сливочным эспуме из белых грибов</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Мерло, Гаме</span>
+                            <span class="dish-tag calories">~280 ккал</span>
+                            <span class="dish-tag">Блендирование + Сифон</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(21)" style="animation-delay: 1.05s">
+                    <img class="dish-image" src="https://totgoose.github.io/riet-iz-atlanticheskoy-skumbrii.jpg" alt="Риет из атлантической скумбрии" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Риет из атлантической скумбрии</h3>
+                            <span class="dish-price">860 ₽</span>
+                        </div>
+                        <p class="dish-details">С домашней Рикоттой, Тепенаде, щучьей икрой и тостами из Бриошь</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Мюскаде, Пикпуль</span>
+                            <span class="dish-tag calories">~320 ккал</span>
+                            <span class="dish-tag">Томление в жиру</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(22)" style="animation-delay: 1.1s">
+                    <img class="dish-image" src="https://totgoose.github.io/livanskiy-khumus.jpg" alt="Ливанский хумус" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Ливанский хумус</h3>
+                            <span class="dish-price">580 ₽</span>
+                        </div>
+                        <p class="dish-details">С маринованным Романо и артишоками</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Розе, Безалкогольный мохито</span>
+                            <span class="dish-tag calories">~180 ккал</span>
+                            <span class="dish-tag">Варка + Блендирование</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(23)" style="animation-delay: 1.1500000000000001s">
+                    <img class="dish-image" src="https://totgoose.github.io/salat-s-krabom.jpg" alt="Салат с крабом" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Салат с крабом</h3>
+                            <span class="dish-price">1750 ₽</span>
+                        </div>
+                        <p class="dish-details">Филе 1-й фаланги краба с чатни из манго, клубникой и лимонно-сливочным эспуме</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Шардоне, Совиньон Блан</span>
+                            <span class="dish-tag calories">~240 ккал</span>
+                            <span class="dish-tag">Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(24)" style="animation-delay: 1.2000000000000002s">
+                    <img class="dish-image" src="https://totgoose.github.io/bolshoy-zelenyy-salat.jpg" alt="Большой зеленый салат" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Большой зеленый салат</h3>
+                            <span class="dish-price">950 ₽</span>
+                        </div>
+                        <p class="dish-details">Листья салата, авокадо, молодой стручковый горошек, брокколи, цуккини кунжутная заправка</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Совиньон Блан, Грин Вельтлинер</span>
+                            <span class="dish-tag calories">~150 ккал</span>
+                            <span class="dish-tag">Нарезка + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(25)" style="animation-delay: 1.25s">
+                    <img class="dish-image" src="https://totgoose.github.io/pâté-en-croute.jpg" alt="Pâté en croute" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Pâté en croute</h3>
+                            <span class="dish-price">980 ₽</span>
+                        </div>
+                        <p class="dish-details">Мясной пирог из гуся, фермерского петуха, говяжьей вырезки и костного мозга (лионская кухня)</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Божоле Нуво, Пино Нуар</span>
+                            <span class="dish-tag calories">~380 ккал</span>
+                            <span class="dish-tag">Выпечка в тесте</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(26)" style="animation-delay: 1.3s">
+                    <img class="dish-image" src="https://totgoose.github.io/govyazhiy-rostbif.jpg" alt="Говяжий ростбиф" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Говяжий ростбиф</h3>
+                            <span class="dish-price">980 ₽</span>
+                        </div>
+                        <p class="dish-details">Слайсы вырезки на низкой температуре с печеным чесноком, вялеными томатами, горчичным соусом на кремовом сыре</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Мальбек, Шираз</span>
+                            <span class="dish-tag calories">~210 ккал</span>
+                            <span class="dish-tag">Су-вид/Запекание</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Сырое-мясо-и-рыба">
+            <div class="section-header">
+                <h2 class="section-title">Сырое мясо и рыба</h2>
+                <span class="section-count">3</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(27)" style="animation-delay: 1.35s">
+                    <img class="dish-image" src="https://totgoose.github.io/tartar-iz-govyazhey-vyrezki.jpg" alt="Тартар из говяжьей вырезки" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Тартар из говяжьей вырезки</h3>
+                            <span class="dish-price">980 ₽</span>
+                        </div>
+                        <p class="dish-details">С мостардой и эспуме из сыра Грано Падано</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Пино Нуар, Божоле</span>
+                            <span class="dish-tag calories">~290 ккал</span>
+                            <span class="dish-tag">Рубка + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(28)" style="animation-delay: 1.4000000000000001s">
+                    <img class="dish-image" src="https://totgoose.github.io/seviche-iz-morskogo-grebeshka.jpg" alt="Севиче из морского гребешка" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Севиче из морского гребешка</h3>
+                            <span class="dish-price">1850 ₽</span>
+                        </div>
+                        <p class="dish-details">Сахалинский гребешок с огурцом, соком юдзу, фенхелем и виноградом</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Альбариньо, Вердиккьо</span>
+                            <span class="dish-tag calories">~160 ккал</span>
+                            <span class="dish-tag">Маринование</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(29)" style="animation-delay: 1.4500000000000002s">
+                    <img class="dish-image" src="https://totgoose.github.io/tartar-iz-lososya.jpg" alt="Тартар из лосося" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Тартар из лосося</h3>
+                            <span class="dish-price">1350 ₽</span>
+                        </div>
+                        <p class="dish-details">С заправкой из Саке и эспуме из Биска</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Рислинг, Гевюрцтраминер</span>
+                            <span class="dish-tag calories">~220 ккал</span>
+                            <span class="dish-tag">Нарезка + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Горячие-закуски">
+            <div class="section-header">
+                <h2 class="section-title">Горячие закуски</h2>
+                <span class="section-count">6</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(30)" style="animation-delay: 1.5s">
+                    <img class="dish-image" src="https://totgoose.github.io/volovan-à-la-bourguignonne.jpg" alt="Волован À la bourguignonne" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Волован À la bourguignonne</h3>
+                            <span class="dish-price">1450 ₽</span>
+                        </div>
+                        <p class="dish-details">Корзинка из слоеного теста с бычьими хвостами в Pinot Noir и сливочным соусом из белых грибов</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Пино Нуар, Божоле Виллаж</span>
+                            <span class="dish-tag calories">~340 ккал</span>
+                            <span class="dish-tag">Выпечка + Тушение</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(31)" style="animation-delay: 1.55s">
+                    <img class="dish-image" src="https://totgoose.github.io/byush-de-shevr.jpg" alt="Бюш-Де-Шевр" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Бюш-Де-Шевр</h3>
+                            <span class="dish-price">960 ₽</span>
+                        </div>
+                        <p class="dish-details">Жареный козий сыр с плесенью, чатни из хурмы, клубника, инжирная мастарда</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Совиньон Блан, Сэмийон</span>
+                            <span class="dish-tag calories">~280 ккал</span>
+                            <span class="dish-tag">Запекание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(32)" style="animation-delay: 1.6s">
+                    <img class="dish-image" src="https://totgoose.github.io/kish-s-krabom.jpg" alt="Киш с крабом" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Киш с крабом</h3>
+                            <span class="dish-price">950 ₽</span>
+                        </div>
+                        <p class="dish-details">Горячий тарт с морепродуктами и мясом камчатского краба</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Шардоне, Пино Блан</span>
+                            <span class="dish-tag calories">~310 ккал</span>
+                            <span class="dish-tag">Выпечка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(33)" style="animation-delay: 1.6500000000000001s">
+                    <img class="dish-image" src="https://totgoose.github.io/steyk-iz-kapusty.jpg" alt="Стейк из капусты" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Стейк из капусты</h3>
+                            <span class="dish-price">720 ₽</span>
+                        </div>
+                        <p class="dish-details">Жареная капуста с ароматными травами и копченой сметаной</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Гевюрцтраминер, Рислинг</span>
+                            <span class="dish-tag calories">~180 ккал</span>
+                            <span class="dish-tag">Обжарка + Запекание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(34)" style="animation-delay: 1.7000000000000002s">
+                    <img class="dish-image" src="https://totgoose.github.io/frantsuzskiy-lukovyy-pirog.jpg" alt="Французский луковый пирог" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Французский луковый пирог</h3>
+                            <span class="dish-price">650 ₽</span>
+                        </div>
+                        <p class="dish-details">Карамелизированный лук шалот на слоеном тесте</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Шардоне, Вионье</span>
+                            <span class="dish-tag calories">~260 ккал</span>
+                            <span class="dish-tag">Карамелизация + Выпечка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(35)" style="animation-delay: 1.75s">
+                    <img class="dish-image" src="https://totgoose.github.io/zharenaya-fua-gra.jpg" alt="Жареная Фуа-гра" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Жареная Фуа-гра</h3>
+                            <span class="dish-price">2400 ₽</span>
+                        </div>
+                        <p class="dish-details">С фундуком, яблоками в меде и соусом из киви и манго</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Сотерн, Токай Асу</span>
+                            <span class="dish-tag calories">~480 ккал</span>
+                            <span class="dish-tag">Быстрая обжарка</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Супы">
+            <div class="section-header">
+                <h2 class="section-title">Супы</h2>
+                <span class="section-count">2</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(36)" style="animation-delay: 1.8s">
+                    <img class="dish-image" src="https://totgoose.github.io/frantsuzskiy-lukovyy-sup-zapechennyy.jpg" alt="Французский луковый суп (запеченный)" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Французский луковый суп (запеченный)</h3>
+                            <span class="dish-price">650 ₽</span>
+                        </div>
+                        <p class="dish-details">По классическому лионскому рецепту</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Совиньон Блан, Мюскаде</span>
+                            <span class="dish-tag calories">~290 ккал</span>
+                            <span class="dish-tag">Карамелизация + Гратинирование</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(37)" style="animation-delay: 1.85s">
+                    <img class="dish-image" src="https://totgoose.github.io/marselskiy-sup.jpg" alt="Марсельский суп" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Марсельский суп</h3>
+                            <span class="dish-price">1250 ₽</span>
+                        </div>
+                        <p class="dish-details">Томатный суп с фенхелем, кальмарами, мидиями, лососем, палтусом и креветками</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Розе Прованс, Верментино</span>
+                            <span class="dish-tag calories">~220 ккал</span>
+                            <span class="dish-tag">Варка</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Основные-блюда">
+            <div class="section-header">
+                <h2 class="section-title">Основные блюда</h2>
+                <span class="section-count">5</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(38)" style="animation-delay: 1.9000000000000001s">
+                    <img class="dish-image" src="https://totgoose.github.io/file-minon-so-smorchkami.jpg" alt="Филе-миньон со сморчками" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Филе-миньон со сморчками</h3>
+                            <span class="dish-price">1850 ₽</span>
+                        </div>
+                        <p class="dish-details">Говяжья вырезка со сморчками в сливочном соусе и жареным цуккини</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Бордо, Каберне Фран</span>
+                            <span class="dish-tag calories">~420 ккал</span>
+                            <span class="dish-tag">Обжарка + Тушение</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(39)" style="animation-delay: 1.9500000000000002s">
+                    <img class="dish-image" src="https://totgoose.github.io/befstroganov-iz-govyazhey-vyrezki.jpg" alt="Бефстроганов из говяжьей вырезки" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Бефстроганов из говяжьей вырезки</h3>
+                            <span class="dish-price">1250 ₽</span>
+                        </div>
+                        <p class="dish-details">В сметано-томатном соусе с коньяком, с пюре из батата и битыми огурцами</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Каберне Совиньон, Шираз</span>
+                            <span class="dish-tag calories">~380 ккал</span>
+                            <span class="dish-tag">Обжарка + Тушение</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(40)" style="animation-delay: 2.0s">
+                    <img class="dish-image" src="https://totgoose.github.io/losos.jpg" alt="Лосось" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Лосось</h3>
+                            <span class="dish-price">1650 ₽</span>
+                        </div>
+                        <p class="dish-details">Филе на коже Medium Rare с жареным картофелем и шпинатом</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Пино Гриджио, Альбариньо</span>
+                            <span class="dish-tag calories">~310 ккал</span>
+                            <span class="dish-tag">Обжарка на коже</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(41)" style="animation-delay: 2.0500000000000003s">
+                    <img class="dish-image" src="https://totgoose.github.io/paltus.jpg" alt="Палтус" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Палтус</h3>
+                            <span class="dish-price">1650 ₽</span>
+                        </div>
+                        <p class="dish-details">Филе со сливочно-луковым соусом с Мадерой и пастой фрегола</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Шардоне, Вионье</span>
+                            <span class="dish-tag calories">~290 ккал</span>
+                            <span class="dish-tag">Жарка + Соус</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(42)" style="animation-delay: 2.1s">
+                    <img class="dish-image" src="https://totgoose.github.io/morskoy-grebeshok.jpg" alt="Морской гребешок" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Морской гребешок</h3>
+                            <span class="dish-price">2900 ₽</span>
+                        </div>
+                        <p class="dish-details">Жареный с пюре Рамеско Верде и цитрусовой заправкой</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Совиньон Блан, Пикпуль</span>
+                            <span class="dish-tag calories">~240 ккал</span>
+                            <span class="dish-tag">Быстрая обжарка</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Постное-меню">
+            <div class="section-header">
+                <h2 class="section-title">Постное меню</h2>
+                <span class="section-count">10</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(43)" style="animation-delay: 2.15s">
+                    <img class="dish-image" src="https://totgoose.github.io/karpachcho-iz-tsvetnoy-kapusty.jpg" alt="Карпаччо из цветной капусты" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Карпаччо из цветной капусты</h3>
+                            <span class="dish-price">680 ₽</span>
+                        </div>
+                        <p class="dish-details">С трюфельной заправкой, муссом из цветной капусты и миндалем</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Пино Гриджио, Гави</span>
+                            <span class="dish-tag calories">~120 ккал</span>
+                            <span class="dish-tag">Нарезка + Маринование</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(44)" style="animation-delay: 2.2s">
+                    <img class="dish-image" src="https://totgoose.github.io/karpachcho-iz-svekly.jpg" alt="Карпаччо из свеклы" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Карпаччо из свеклы</h3>
+                            <span class="dish-price">620 ₽</span>
+                        </div>
+                        <p class="dish-details">С соусом «Винегрет», водорослями Нури и кедровыми орешками</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Розе, Пино Нуар (легкий)</span>
+                            <span class="dish-tag calories">~90 ккал</span>
+                            <span class="dish-tag">Запекание + Нарезка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(45)" style="animation-delay: 2.25s">
+                    <img class="dish-image" src="https://totgoose.github.io/livanskiy-khumus-2.jpg" alt="Ливанский хумус" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Ливанский хумус</h3>
+                            <span class="dish-price">580 ₽</span>
+                        </div>
+                        <p class="dish-details">С маринованным Романо и артишоками</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Розе, Безалкогольный мохито</span>
+                            <span class="dish-tag calories">~180 ккал</span>
+                            <span class="dish-tag">Варка + Блендирование</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(46)" style="animation-delay: 2.3000000000000003s">
+                    <img class="dish-image" src="https://totgoose.github.io/bolshoy-zelenyy-salat-2.jpg" alt="Большой зеленый салат" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Большой зеленый салат</h3>
+                            <span class="dish-price">950 ₽</span>
+                        </div>
+                        <p class="dish-details">Листья салата, авокадо, горошек, брокколи, цуккини кунжутная заправка</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Совиньон Блан, Грин Вельтлинер</span>
+                            <span class="dish-tag calories">~150 ккал</span>
+                            <span class="dish-tag">Нарезка + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(47)" style="animation-delay: 2.35s">
+                    <img class="dish-image" src="https://totgoose.github.io/sup-iz-chechevitsy.jpg" alt="Суп из чечевицы" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Суп из чечевицы</h3>
+                            <span class="dish-price">650 ₽</span>
+                        </div>
+                        <p class="dish-details">С карри на кокосовых сливках, лаймом, мятой и кинзой</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Безалкогольный, Рислинг</span>
+                            <span class="dish-tag calories">~180 ккал</span>
+                            <span class="dish-tag">Варка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(48)" style="animation-delay: 2.4000000000000004s">
+                    <img class="dish-image" src="https://totgoose.github.io/kartofelnyy-rosti-s-gribami.jpg" alt="Картофельный рости с грибами" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Картофельный рости с грибами</h3>
+                            <span class="dish-price">850 ₽</span>
+                        </div>
+                        <p class="dish-details">Швейцарское блюдо из тертого картофеля с вешенками и постной сметаной</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Пино Нуар, Гаме</span>
+                            <span class="dish-tag calories">~240 ккал</span>
+                            <span class="dish-tag">Обжарка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(49)" style="animation-delay: 2.45s">
+                    <img class="dish-image" src="https://totgoose.github.io/steyk-iz-kapusty-2.jpg" alt="Стейк из капусты" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Стейк из капусты</h3>
+                            <span class="dish-price">620 ₽</span>
+                        </div>
+                        <p class="dish-details">Жареная капуста с травами и постной сметаной</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Гевюрцтраминер, Рислинг</span>
+                            <span class="dish-tag calories">~180 ккал</span>
+                            <span class="dish-tag">Обжарка + Запекание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(50)" style="animation-delay: 2.5s">
+                    <img class="dish-image" src="https://totgoose.github.io/fetuchini-s-belymi-gribami.jpg" alt="Фетучини с белыми грибами" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Фетучини с белыми грибами</h3>
+                            <span class="dish-price">990 ₽</span>
+                        </div>
+                        <p class="dish-details">Соус из уваренных белых грибов и оливкового масла</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Кьянти, Санджовезе</span>
+                            <span class="dish-tag calories">~380 ккал</span>
+                            <span class="dish-tag">Варка + Соус</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(51)" style="animation-delay: 2.5500000000000003s">
+                    <img class="dish-image" src="https://totgoose.github.io/pshyonnaya-kasha.jpg" alt="Пшённая каша" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Пшённая каша</h3>
+                            <span class="dish-price">690 ₽</span>
+                        </div>
+                        <p class="dish-details">С мускатной тыквой и вялеными томатами</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Безалкогольный</span>
+                            <span class="dish-tag calories">~150 ккал</span>
+                            <span class="dish-tag">Варка + Запекание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(52)" style="animation-delay: 2.6s">
+                    <img class="dish-image" src="https://totgoose.github.io/sladkaya-tykva.jpg" alt="Сладкая тыква" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Сладкая тыква</h3>
+                            <span class="dish-price">750 ₽</span>
+                        </div>
+                        <p class="dish-details">Запеченная тыква с соусом Маракуйя и карамелизированным пеканом</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Мускат, Сотерн (десертный)</span>
+                            <span class="dish-tag calories">~180 ккал</span>
+                            <span class="dish-tag">Запекание</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Десерты">
+            <div class="section-header">
+                <h2 class="section-title">Десерты</h2>
+                <span class="section-count">3</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(53)" style="animation-delay: 2.6500000000000004s">
+                    <img class="dish-image" src="https://totgoose.github.io/crème-brûlée.jpg" alt="Crème Brûlée" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Crème Brûlée</h3>
+                            <span class="dish-price">950 ₽</span>
+                        </div>
+                        <p class="dish-details">Классический французский сливочный десерт с Фуа-Гра и клубникой</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Сотерн, Токай Асу</span>
+                            <span class="dish-tag calories">~320 ккал</span>
+                            <span class="dish-tag">Водяная баня + Горелка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(54)" style="animation-delay: 2.7s">
+                    <img class="dish-image" src="https://totgoose.github.io/beyliz-milfey.jpg" alt="Бейлиз мильфей" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Бейлиз мильфей</h3>
+                            <span class="dish-price">790 ₽</span>
+                        </div>
+                        <p class="dish-details">Коржи из бездрожжевого теста с бейлиз-кремом и малиновым соусом</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Портвейн, Мадера</span>
+                            <span class="dish-tag calories">~410 ккал</span>
+                            <span class="dish-tag">Выпечка + Сборка</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(55)" style="animation-delay: 2.75s">
+                    <img class="dish-image" src="https://totgoose.github.io/persikovyy-tart-s-gorgonzoloy.jpg" alt="Персиковый тарт с Горгонзолой" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Персиковый тарт с Горгонзолой</h3>
+                            <span class="dish-price">760 ₽</span>
+                        </div>
+                        <p class="dish-details">Слоёный пирог с персиком в бальзамическом соусе, с ванильным мороженым</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 Ламбруско, Просекко</span>
+                            <span class="dish-tag calories">~360 ккал</span>
+                            <span class="dish-tag">Выпечка</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="section-Безалкогольные-напитки">
+            <div class="section-header">
+                <h2 class="section-title">Безалкогольные напитки</h2>
+                <span class="section-count">13</span>
+            </div>
+            <div class="menu-grid">
+                <article class="dish-card" onclick="openModal(56)" style="animation-delay: 2.8000000000000003s">
+                    <img class="dish-image" src="https://totgoose.github.io/limonad-tsitrusovyy-300ml.jpg" alt="Лимонад Цитрусовый 300мл" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Лимонад Цитрусовый 300мл</h3>
+                            <span class="dish-price">390 ₽</span>
+                        </div>
+                        <p class="dish-details">Освежающий прохладительный напиток с ярким кисло-сладким вкусом цитрусовых фруктов. Подаётся охлаждённым, идеально утоляет жажду</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~45 ккал</span>
+                            <span class="dish-tag">Настаивание + Охлаждение</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(57)" style="animation-delay: 2.85s">
+                    <img class="dish-image" src="https://totgoose.github.io/naturalnyy-yagodnyy-mors.jpg" alt="Натуральный ягодный морс" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Натуральный ягодный морс</h3>
+                            <span class="dish-price">390 ₽</span>
+                        </div>
+                        <p class="dish-details">Малина, клубника, чёрная смородина</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~60 ккал</span>
+                            <span class="dish-tag">Отжим + Настаивание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(58)" style="animation-delay: 2.9000000000000004s">
+                    <img class="dish-image" src="https://totgoose.github.io/voda-sairme-05l.jpg" alt="Вода «Sairme» 0,5л" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Вода «Sairme» 0,5л</h3>
+                            <span class="dish-price">300 ₽</span>
+                        </div>
+                        <p class="dish-details">Без газа / с газом</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">0 ккал</span>
+                            <span class="dish-tag">Розлив</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(59)" style="animation-delay: 2.95s">
+                    <img class="dish-image" src="https://totgoose.github.io/chernyy.jpg" alt="Черный" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Черный</h3>
+                            <span class="dish-price">450 ₽</span>
+                        </div>
+                        <p class="dish-details">Классический крепкий чай с насыщенным вкусом и ароматом</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~2-5 ккал</span>
+                            <span class="dish-tag">Заваривание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(60)" style="animation-delay: 3.0s">
+                    <img class="dish-image" src="https://totgoose.github.io/zelenyy-sencha.jpg" alt="Зеленый сенча" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Зеленый сенча</h3>
+                            <span class="dish-price">450 ₽</span>
+                        </div>
+                        <p class="dish-details">Японский зелёный чай с травянистым вкусом и лёгкой терпкостью</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~2-5 ккал</span>
+                            <span class="dish-tag">Заваривание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(61)" style="animation-delay: 3.0500000000000003s">
+                    <img class="dish-image" src="https://totgoose.github.io/zelenyy-s-zhasminom.jpg" alt="Зеленый с жасмином" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Зеленый с жасмином</h3>
+                            <span class="dish-price">450 ₽</span>
+                        </div>
+                        <p class="dish-details">Нежный зелёный чай с цветочным ароматом жасмина</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~2-5 ккал</span>
+                            <span class="dish-tag">Заваривание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(62)" style="animation-delay: 3.1s">
+                    <img class="dish-image" src="https://totgoose.github.io/molochnyy-ulun.jpg" alt="Молочный улун" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Молочный улун</h3>
+                            <span class="dish-price">450 ₽</span>
+                        </div>
+                        <p class="dish-details">Полуферментированный тайваньский чай с кремовым послевкусием</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~2-5 ккал</span>
+                            <span class="dish-tag">Заваривание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(63)" style="animation-delay: 3.1500000000000004s">
+                    <img class="dish-image" src="https://totgoose.github.io/bergamot.jpg" alt="Бергамот" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Бергамот</h3>
+                            <span class="dish-price">450 ₽</span>
+                        </div>
+                        <p class="dish-details">Чёрный чай с цитрусовой ноткой бергамота (Эрл Грей)</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~2-5 ккал</span>
+                            <span class="dish-tag">Заваривание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(64)" style="animation-delay: 3.2s">
+                    <img class="dish-image" src="https://totgoose.github.io/travyanoy.jpg" alt="Травяной" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Травяной</h3>
+                            <span class="dish-price">450 ₽</span>
+                        </div>
+                        <p class="dish-details">Сбор из лекарственных трав без кофеина</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~2-5 ккал</span>
+                            <span class="dish-tag">Заваривание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(65)" style="animation-delay: 3.25s">
+                    <img class="dish-image" src="https://totgoose.github.io/klyukvennyy.jpg" alt="Клюквенный" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Клюквенный</h3>
+                            <span class="dish-price">950 ₽</span>
+                        </div>
+                        <p class="dish-details">Ягодный чай с кисло-сладким вкусом клюквы</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~2-5 ккал</span>
+                            <span class="dish-tag">Заваривание</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(66)" style="animation-delay: 3.3000000000000003s">
+                    <img class="dish-image" src="https://totgoose.github.io/amerikano-espresso.jpg" alt="Американо, эспрессо" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Американо, эспрессо</h3>
+                            <span class="dish-price">250 ₽</span>
+                        </div>
+                        <p class="dish-details">Arabica</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~5-150 ккал</span>
+                            <span class="dish-tag">Эспрессо-машина</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(67)" style="animation-delay: 3.35s">
+                    <img class="dish-image" src="https://totgoose.github.io/kapuchino-dvoynoy-espresso.jpg" alt="Капучино, двойной эспрессо" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Капучино, двойной эспрессо</h3>
+                            <span class="dish-price">450 ₽</span>
+                        </div>
+                        <p class="dish-details">Arabica  + Any Milk</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~5-150 ккал</span>
+                            <span class="dish-tag">Эспрессо-машина</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="dish-card" onclick="openModal(68)" style="animation-delay: 3.4000000000000004s">
+                    <img class="dish-image" src="https://totgoose.github.io/latte.jpg" alt="Латте" loading="lazy" onerror="this.style.display='none'">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Латте</h3>
+                            <span class="dish-price">550 ₽</span>
+                        </div>
+                        <p class="dish-details">Arabica  + Any Milk</p>
+                        <div class="dish-meta">
+                            <span class="dish-tag wine">🍷 -</span>
+                            <span class="dish-tag calories">~5-150 ккал</span>
+                            <span class="dish-tag">Эспрессо-машина</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img class="modal-image" id="modal-image" src="" alt="">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modal-title"></h2>
+                    <span class="modal-price" id="modal-price"></span>
+                </div>
+                <div class="modal-section">
+                    <p class="modal-section-content" id="modal-details"></p>
+                </div>
+                <div class="modal-grid" id="modal-info"></div>
+                <div class="modal-section" id="modal-history-section" style="display:none">
+                    <h4 class="modal-section-title">История блюда</h4>
+                    <p class="modal-section-content" id="modal-history"></p>
+                </div>
+                <div class="modal-section" id="modal-facts-section" style="display:none">
+                    <h4 class="modal-section-title">Интересные факты</h4>
+                    <ul class="modal-facts modal-section-content" id="modal-facts"></ul>
+                </div>
+                <div class="modal-section" id="modal-recipe-section" style="display:none">
+                    <h4 class="modal-section-title">Рецептура</h4>
+                    <p class="modal-section-content" id="modal-recipe"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Москва, Валовая, 26</p>
+                <a href="tel:+79999262688">+7 9999 26 26 88</a>
+                <a href="mailto:goose@totgoose.ru">goose@totgoose.ru</a>
+                <a href="https://www.totgoose.ru" target="_blank">www.totgoose.ru</a>
+            </div>
+            <div class="footer-section">
+                <h3>Часы работы</h3>
+                <p>Пн - Чт: 12:00 - 24:00</p>
+                <p>Пт: 12:00 до «Как пойдёт»</p>
+                <p>Сб: 13:00 до «Как пойдёт»</p>
+                <p>Вс: 14:00 - 23:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="https://vk.com/totgooserestocafe" target="_blank" title="VK">VK</a>
+                    <a href="https://t.me/totgooserestocafe" target="_blank" title="Telegram">TG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Гастрокафе «Тот Ещё Гусь». Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuData = {
+            0: {
+                name: "Ребро",
+                price: "2200 ₽",
+                details: "Копченое на ольховой стружке говяжье ребро, приготовленное на низкой температуре. Подается с соусом из розового перца и пюре из пастернака",
+                image: "https://totgoose.github.io/rebro.jpg",
+                history: "Копчение на ольхе пришло из средневековой Европы. Ольховая щепа даёт мягкий, слегка сладковатый дым и золотистый цвет.",
+                facts: "• Ольха считается лучшей древесиной для говядины
+• Sous-vide сохраняет 95% натурального сока
+• 24-часовая выдержка раскрывает глубину вкуса",
+                recipe: "Маринад 12ч → копчение на ольхе 110°C → подача с соусом из розового перца и пюре пастернака",
+                method: "Копчение + Су-вид",
+                origin: "Европейская кухня",
+                wine: "Каберне Совиньон, Мерло",
+                calories: "~450 ккал",
+                time: "24 ч (с маринованием)",
+                allergens: "Нет"
+            },
+            1: {
+                name: "Оссобуко",
+                price: "2200 ₽",
+                details: "Стейк из поперечного разреза говяжьей голени с мозговой косточкой, приготовленный на низкой температуре. Подаётся с соусом и гарниром из жаренного фенхеля",
+                image: "https://totgoose.github.io/ossobuko.jpg",
+                history: "Блюдо Ломбардии XIX в. Название переводится как «полая кость». Первый задокументированный рецепт у П. Артузи.",
+                facts: "• Изначально крестьянская еда
+• Классика подаётся с гремолатой
+• Версия in bianco готовится без томатов",
+                recipe: "Обжарка в муке → тушение с овощами, вином и бульоном 2-3ч → гарнир из фенхеля",
+                method: "Бразирование (тушение)",
+                origin: "Италия, Ломбардия",
+                wine: "Бароло, Кьянти Классико",
+                calories: "~380 ккал",
+                time: "3 ч",
+                allergens: "Глютен"
+            },
+            2: {
+                name: "Шея ягнёнка",
+                price: "3900 ₽",
+                details: "Томлённая на низкой температуре с солодовым соусом и бренди. Подаётся с жареным луком порей и бейби-картофелем (на двоих)",
+                image: "https://totgoose.github.io/sheya-yagnyonka.jpg",
+                history: "Традиционное праздничное блюдо. Длительное томление превращает соединительные ткани в нежный желеобразный бульон.",
+                facts: "• Самый сочный отруб ягнёнка
+• 6-8 часов при низкой температуре
+• Идеально делится на двоих",
+                recipe: "Маринад с травами → су-вид 65-70°C с бренди и солодовым соусом → подача с луком порей и бейби-картофелем",
+                method: "Су-вид / Томление",
+                origin: "Французская кухня",
+                wine: "Шато Неф-дю-Пап, Сира",
+                calories: "~520 ккал",
+                time: "8 ч",
+                allergens: "Нет"
+            },
+            3: {
+                name: "Вымя гриль",
+                price: "1450 ₽",
+                details: "Жареное говяжье вымя с перечным соусом и цветной капустой",
+                image: "https://totgoose.github.io/vymya-gril.jpg",
+                history: "Субпродукт, популярный в восточноевропейской и кавказской кухне. Богат коллагеном и железом.",
+                facts: "• Требует тщательной предварительной очистки
+• На гриле приобретает ореховый вкус
+• Отличная текстура при правильной жарке",
+                recipe: "Отварка до мягкости → нарезка → быстрая обжарка на гриле → подача с перечным соусом",
+                method: "Гриль",
+                origin: "Восточная Европа",
+                wine: "Пино Нуар, Цвайгельт",
+                calories: "~280 ккал",
+                time: "1.5 ч",
+                allergens: "Нет"
+            },
+            4: {
+                name: "Язык молочного теленка",
+                price: "990 ₽",
+                details: "Глазированный язык теленка с опаленным романо и луком-конфи",
+                image: "https://totgoose.github.io/yazyk-molochnogo-telenka.jpg",
+                history: "Деликатес французской классики. Язык молочного телёнка считается самым нежным.",
+                facts: "• Снимается кожа сразу после варки
+• Глазировка создаёт карамельную корочку
+• Подаётся с овощами конфи",
+                recipe: "Бланшировка → снятие кожи → томление → глазировка → подача с романо и луком-конфи",
+                method: "Томление + Глазировка",
+                origin: "Франция",
+                wine: "Божоле, Гаме",
+                calories: "~220 ккал",
+                time: "2.5 ч",
+                allergens: "Нет"
+            },
+            5: {
+                name: "Кот дю Бёф",
+                price: "3950 ₽",
+                details: "Говяжий антрекот на кости с томатным чимичури и печёным чесноком (на двоих)",
+                image: "https://totgoose.github.io/kot-dyu-byof.jpg",
+                history: "Французский стейк на кости. Подается на двоих, символизирует щедрость и мастерство гриль-мастера.",
+                facts: "• Вес 730-1000 г
+• Толщина ~6 см
+• Кость усиливает мясной вкус при жарке",
+                recipe: "Комнатная температура → обжарка до корочки → доведение в духовке 180°C → отдых 5 мин",
+                method: "Гриль + Духовка",
+                origin: "Франция",
+                wine: "Бордо, Мальбек",
+                calories: "~650 ккал",
+                time: "40 мин",
+                allergens: "Нет"
+            },
+            6: {
+                name: "Телячий желудок со сморчками",
+                price: "1250 ₽",
+                details: "Желудок, томленный в грибном бульоне, со сморчками в соусе из мадеры",
+                image: "https://totgoose.github.io/telyachiy-zheludok-so-smorchkami.jpg",
+                history: "Итальянское/французское блюдо из субпродуктов. Требует длительного томления для мягкости.",
+                facts: "• Сморчки придают умами-вкус
+• Мадера в соусе балансирует жирность
+• Блюдо для ценителей текстуры",
+                recipe: "Очистка → томление в грибном бульоне → тушение со сморчками в мадере",
+                method: "Томление",
+                origin: "Италия/Франция",
+                wine: "Кьянти, Санджовезе",
+                calories: "~190 ккал",
+                time: "3 ч",
+                allergens: "Грибы, Сульфиты"
+            },
+            7: {
+                name: "Почки ягненка в хересе",
+                price: "950 ₽",
+                details: "Почки в хересе Pedro Ximenez и солодовом соусе со спагетти из цуккини",
+                image: "https://totgoose.github.io/pochki-yagnenka-v-kherese.jpg",
+                history: "Классика британской и французской кухни. Херес Pedro Ximenez убирает специфический запах.",
+                facts: "• Готовятся строго Medium Rare
+• Херес даёт карамельную сладость
+• Цуккини спагетти добавляют свежесть",
+                recipe: "Обжарка → деглазировка хересом PX → добавление солодового соуса → спагетти из цуккини",
+                method: "Жарка + Деглазировка",
+                origin: "Великобритания/Франция",
+                wine: "Херес Амонтильядо, Олоросо",
+                calories: "~210 ккал",
+                time: "30 мин",
+                allergens: "Сульфиты"
+            },
+            8: {
+                name: "Кости",
+                price: "1750 ₽",
+                details: "«Сахарная» мозговая говяжья кость, запечённая с розмарином и чесноком",
+                image: "https://totgoose.github.io/kosti.jpg",
+                history: "Закуска из мозговых говяжьих костей. Популярна в французских бистро и испанских тавернах.",
+                facts: "• Мозг богат омега-3 и фосфолипидами
+• Запекается разрезом вверх
+• Розмарин и чеснок пробивают жирность",
+                recipe: "Запекание при 200°C с розмарином и чесноком до золотистой корочки → подача с хлебом",
+                method: "Запекание",
+                origin: "Франция",
+                wine: "Мальбек, Шираз",
+                calories: "~350 ккал",
+                time: "45 мин",
+                allergens: "Нет"
+            },
+            9: {
+                name: "Бараньи яйца с соусом Субиз",
+                price: "980 ₽",
+                details: "Семенники ягненка, жареные с розмарином и чесноком, с соусом Субиз и петрушкой-фри",
+                image: "https://totgoose.github.io/barani-yaytsa-s-sousom-subiz.jpg",
+                history: "Средиземноморский деликатес. Соус Субиз на основе лука и бешамеля сглаживает вкус.",
+                facts: "• Петрушка-фри даёт хруст
+• Соус готовится 40 минут на сливочном масле
+• Редкое, но традиционное блюдо",
+                recipe: "Обжарка с розмарином → подача с соусом Субиз и хрустящей петрушкой",
+                method: "Жарка + Соус",
+                origin: "Средиземноморье",
+                wine: "Гренаш, Темпранильо",
+                calories: "~240 ккал",
+                time: "25 мин",
+                allergens: "Глютен, Молочные"
+            },
+            10: {
+                name: "Стейк из говяжьей печени",
+                price: "1350 ₽",
+                details: "Говяжья печень гриль Medium Rare с лимонным луком и медово-горчичным соусом",
+                image: "https://totgoose.github.io/steyk-iz-govyazhey-pecheni.jpg",
+                history: "Популярен в немецкой и русской кухне. Готовится Medium Rare для сохранения нежности.",
+                facts: "• Не требует длительного маринования
+• Лимонный лук убирает металлический привкус
+• Медово-горчичный соус балансирует вкус",
+                recipe: "Быстрая обжарка на сковороде до Medium Rare → подача с лимонным луком и соусом",
+                method: "Гриль / Жарка",
+                origin: "Германия",
+                wine: "Цвайгельт, Бургундское красное",
+                calories: "~180 ккал",
+                time: "15 мин",
+                allergens: "Нет"
+            },
+            11: {
+                name: "Утиная грудка Магре",
+                price: "1150 ₽",
+                details: "Жареная утиная грудка по-французски с бейби морковкой и цитрусовым соусом",
+                image: "https://totgoose.github.io/utinaya-grudka-magre.jpg",
+                history: "Французская классика (Magret de Canard). Жир утки вытапливается при жарке, создавая хрустящую кожу.",
+                facts: "• Грудка мускусной утки
+• Надрезы кожицы помогают вытапливать жир
+• Цитрусовый соус контрастирует с жирностью",
+                recipe: "Обжарка кожицей вниз 7 мин → переворот 3 мин → отдых → подача с морковью и соусом",
+                method: "Жарка",
+                origin: "Франция (Юго-Запад)",
+                wine: "Пино Нуар, Божоле",
+                calories: "~320 ккал",
+                time: "25 мин",
+                allergens: "Нет"
+            },
+            12: {
+                name: "Рябчик",
+                price: "1900 ₽",
+                details: "Целая птичка почти без костей со спагетти из корня сельдерея",
+                image: "https://totgoose.github.io/ryabchik.jpg",
+                history: "Дичь, любимая русской аристократией XIX в. Почти нет костей, нежное белое мясо.",
+                facts: "• Готовится целой тушкой
+• Сельдерей сохраняет влагу
+• Традиционно подается с брусничным соусом",
+                recipe: "Запекание целой тушки при 160°C → подача со спагетти из сельдерея",
+                method: "Запекание",
+                origin: "Россия/Франция",
+                wine: "Бургундия, Пино Нуар",
+                calories: "~160 ккал",
+                time: "50 мин",
+                allergens: "Нет"
+            },
+            13: {
+                name: "Крекер с анчоусом и цуккини с мягким сыром",
+                price: "140 ₽",
+                details: " Хрустящий крекер с солёной рыбой, свежими кабачками и нежным сыром ",
+                image: "https://totgoose.github.io/kreker-s-anchousom-i-tsukkini-s-myagkim-syrom.jpg",
+                history: "Испанские тапас. Анчоусы из Кантабрии считаются лучшими в мире.",
+                facts: "• Анчоусы солят и выдерживают 8-10 мес
+• Цуккини маринуют в лимоне
+• Крекер заменяет хлеб для хруста",
+                recipe: "Намазывание сыра → выкладка анчоуса и цуккини → подача",
+                method: "Сборка",
+                origin: "Испания",
+                wine: "Альбариньо, Верментино",
+                calories: "~120 ккал",
+                time: "10 мин",
+                allergens: "Рыба, Молочные, Глютен"
+            },
+            14: {
+                name: "Крекер с сырным муссом из палтуса и тунца и щучьей икрой",
+                price: "140 ₽",
+                details: "Хрустящая основа с воздушным рыбным кремом и красной икрой",
+                image: "https://totgoose.github.io/kreker-s-syrnym-mussom-iz-paltusa-i-tuntsa-i-shchuchey-ikroy.jpg",
+                history: "Современная интерпретация канапе. Мусс стабилизируется желатином для формы.",
+                facts: "• Мусс готовится на базе рыбного бульона
+• Щучья икра добавляет солоноватость
+• Воздушная текстура достигается блендером",
+                recipe: "Приготовление мусса → охлаждение → отсадка на крекер → украшение икрой",
+                method: "Сборка",
+                origin: "Авторская",
+                wine: "Совиньон Блан, Рислинг",
+                calories: "~140 ккал",
+                time: "15 мин",
+                allergens: "Рыба, Молочные, Глютен"
+            },
+            15: {
+                name: "Брускетта луком конфи и мягким сыром",
+                price: "420 ₽",
+                details: "Поджаренный багет с карамелизированным луком и сливочным сыром ",
+                image: "https://totgoose.github.io/brusketta-lukom-konfi-i-myagkim-syrom.jpg",
+                history: "Итальянская уличная еда. Конфи готовили часами на медленном огне.",
+                facts: "• Лук томится в масле при 90°C
+• Багет поджаривается с чесноком
+• Сыр растапливается от тепла лука",
+                recipe: "Томление лука 1ч → обжарка хлеба → выкладка сыра и лука",
+                method: "Томление + Сборка",
+                origin: "Италия",
+                wine: "Пино Гриджио, Кортезе",
+                calories: "~220 ккал",
+                time: "20 мин",
+                allergens: "Глютен, Молочные"
+            },
+            16: {
+                name: "Брускетта с опалённым тунцом",
+                price: "680 ₽",
+                details: "Тост с слегка обжаренным свежим тунцом   ",
+                image: "https://totgoose.github.io/brusketta-s-opalyonnym-tuntsom.jpg",
+                history: "Японско-итальянский фьюжн. Тунец обжаривается секундами только снаружи.",
+                facts: "• Внутри остаётся сырым
+• Кунжутная панировка даёт ореховость
+• Подается сразу после обжарки",
+                recipe: "Обвалка в кунжуте → обжарка 15 сек/сторона → нарезка → выкладка на тост",
+                method: "Обжарка + Сборка",
+                origin: "Италия/Япония",
+                wine: "Розе Прованс, Гевюрцтраминер",
+                calories: "~280 ккал",
+                time: "15 мин",
+                allergens: "Рыба, Глютен, Кунжут"
+            },
+            17: {
+                name: "Брускетта с гусем",
+                price: "890 ₽",
+                details: "Томленный в хересе гусь, вяленые томаты, апельсиновый конфитюр на бриошь",
+                image: "https://totgoose.github.io/brusketta-s-gusem.jpg",
+                history: "Французская закуска. Гусь томлен в хересе 4 часа для максимальной нежности.",
+                facts: "• Вяленые томаты дают умами
+• Апельсиновый конфитюр балансирует жир
+• Бриошь подслащает подачу",
+                recipe: "Томление гуся 4ч → конфитюр из апельсина → выкладка на поджаренную бриошь",
+                method: "Томление + Сборка",
+                origin: "Франция",
+                wine: "Рислинг, Пино Блан",
+                calories: "~350 ккал",
+                time: "4 ч",
+                allergens: "Глютен, Молочные, Сульфиты"
+            },
+            18: {
+                name: "Утиные «суси» (4 шт.)",
+                price: "590 ₽",
+                details: "Тонкие слайсы 12-дневной вяленой утиной грудки на сушеной черной сливе",
+                image: "https://totgoose.github.io/utinye-susi-4-sht.jpg",
+                history: "Авторская игра с формой. 12-дневная вяленая грудка концентрирует вкус.",
+                facts: "• Вяление убирает влагу
+• Черная слива даёт кислинку
+• Форма напоминает японские роллы",
+                recipe: "Вяление утки 12 дней → нарезка слайсами → выкладка на чернослив → сворачивание",
+                method: "Вяление + Сборка",
+                origin: "Авторская",
+                wine: "Гевюрцтраминер, Мускат",
+                calories: "~210 ккал",
+                time: "14 д",
+                allergens: "Нет"
+            },
+            19: {
+                name: "Пате из утиной печени с Фуа-гра",
+                price: "950 ₽",
+                details: "С луком конфи, томлёном в утином жиру",
+                image: "https://totgoose.github.io/pate-iz-utinoy-pecheni-s-fua-gra.jpg",
+                history: "Французский рустик. Конфи сохраняет влагу и аромат печени.",
+                facts: "• Томится в собственном жиру
+• Лук конфи даёт сладость
+• Подается охлажденным 2-3 дня",
+                recipe: "Томление печени в утином жиру → блендирование с луком → охлаждение",
+                method: "Запекание + Томление",
+                origin: "Франция",
+                wine: "Сотерн, Токай",
+                calories: "~410 ккал",
+                time: "2 ч",
+                allergens: "Нет"
+            },
+            20: {
+                name: "Паштет из говяжьей печени",
+                price: "560 ₽",
+                details: "Со сливочным эспуме из белых грибов",
+                image: "https://totgoose.github.io/pashtet-iz-govyazhey-pecheni.jpg",
+                history: "Русская классика. Эспуме из белых грибов дает воздушную текстуру.",
+                facts: "• Печень не переваривается
+• Сифон создает пену
+• Подается с гренками",
+                recipe: "Обжарка печени → блендирование со сливками → создание эспуме → выкладка",
+                method: "Блендирование + Сифон",
+                origin: "Россия",
+                wine: "Мерло, Гаме",
+                calories: "~280 ккал",
+                time: "1 ч",
+                allergens: "Молочные, Грибы"
+            },
+            21: {
+                name: "Риет из атлантической скумбрии",
+                price: "860 ₽",
+                details: "С домашней Рикоттой, Тепенаде, щучьей икрой и тостами из Бриошь",
+                image: "https://totgoose.github.io/riet-iz-atlanticheskoy-skumbrii.jpg",
+                history: "Бретонская техника консервации. Изначально риет делали из свинины.",
+                facts: "• Рыба томится в жиру 3 часа
+• Тепенаде из маслин даёт горчинку
+• Домашняя рикотта смягчает вкус",
+                recipe: "Томление рыбы → измельчение → смешивание с рикоттой и тепенаде → охлаждение",
+                method: "Томление в жиру",
+                origin: "Франция (Бретань)",
+                wine: "Мюскаде, Пикпуль",
+                calories: "~320 ккал",
+                time: "3 ч",
+                allergens: "Рыба, Молочные, Глютен"
+            },
+            22: {
+                name: "Ливанский хумус",
+                price: "580 ₽",
+                details: "С маринованным Романо и артишоками",
+                image: "https://totgoose.github.io/livanskiy-khumus.jpg",
+                history: "Ближневосточный staple. Нут замачивают на ночь для мягкости.",
+                facts: "• Тахини даёт ореховый вкус
+• Лимон и чеснок балансируют
+• Романо и артишоки добавляют свежесть",
+                recipe: "Варка нута → блендирование с тахини, лимоном, чесноком → выкладка с топпингами",
+                method: "Варка + Блендирование",
+                origin: "Ливан",
+                wine: "Розе, Безалкогольный мохито",
+                calories: "~180 ккал",
+                time: "2 ч",
+                allergens: "Кунжут, Нут"
+            },
+            23: {
+                name: "Салат с крабом",
+                price: "1750 ₽",
+                details: "Филе 1-й фаланги краба с чатни из манго, клубникой и лимонно-сливочным эспуме",
+                image: "https://totgoose.github.io/salat-s-krabom.jpg",
+                history: "Люксовая закуска. 1-я фаланга краба — самое нежное мясо.",
+                facts: "• Чатни из манго даёт сладость
+• Клубника добавляет кислинку
+• Лимонно-сливочный эспуме связывает вкус",
+                recipe: "Нарезка ингредиентов → создание эспуме → бережная сборка",
+                method: "Сборка",
+                origin: "Авторская",
+                wine: "Шардоне, Совиньон Блан",
+                calories: "~240 ккал",
+                time: "20 мин",
+                allergens: "Ракообразные, Молочные"
+            },
+            24: {
+                name: "Большой зеленый салат",
+                price: "950 ₽",
+                details: "Листья салата, авокадо, молодой стручковый горошек, брокколи, цуккини кунжутная заправка",
+                image: "https://totgoose.github.io/bolshoy-zelenyy-salat.jpg",
+                history: "Современный ЗОЖ-тренд. Кунжутная заправка на базе тахини.",
+                facts: "• Брокколи бланшируется 1 мин
+• Авокадо добавляет сливочность
+• Горошек даёт хруст",
+                recipe: "Нарезка → бланширование брокколи → заправка кунжутным соусом → подача",
+                method: "Нарезка + Сборка",
+                origin: "Авторская",
+                wine: "Совиньон Блан, Грин Вельтлинер",
+                calories: "~150 ккал",
+                time: "10 мин",
+                allergens: "Кунжут"
+            },
+            25: {
+                name: "Pâté en croute",
+                price: "980 ₽",
+                details: "Мясной пирог из гуся, фермерского петуха, говяжьей вырезки и костного мозга (лионская кухня)",
+                image: "https://totgoose.github.io/pâté-en-croute.jpg",
+                history: "Лионская классика. Подается охлажденным, нарезается тонкими слайсами.",
+                facts: "• Тесто поднимается в 7 слоев
+• Фарш из гусиного мяса и петуха
+• Костный мозг даёт жирность",
+                recipe: "Приготовление фарша → закладка в тесто → выпечка → охлаждение 24ч",
+                method: "Выпечка в тесте",
+                origin: "Франция (Лион)",
+                wine: "Божоле Нуво, Пино Нуар",
+                calories: "~380 ккал",
+                time: "2.5 ч",
+                allergens: "Глютен, Яйца, Молочные"
+            },
+            26: {
+                name: "Говяжий ростбиф",
+                price: "980 ₽",
+                details: "Слайсы вырезки на низкой температуре с печеным чесноком, вялеными томатами, горчичным соусом на кремовом сыре",
+                image: "https://totgoose.github.io/govyazhiy-rostbif.jpg",
+                history: "Британское воскресное блюдо. Готовится при 55-60°C для розовой середины.",
+                facts: "• Вяленые томаты дают умами
+• Печеный чеснок сладкий
+• Горчичный соус на креме балансирует",
+                recipe: "Запекание при 60°C до готовности → тонкая нарезка → выкладка с соусами",
+                method: "Су-вид/Запекание",
+                origin: "Великобритания",
+                wine: "Мальбек, Шираз",
+                calories: "~210 ккал",
+                time: "1.5 ч",
+                allergens: "Молочные, Горчица"
+            },
+            27: {
+                name: "Тартар из говяжьей вырезки",
+                price: "980 ₽",
+                details: "С мостардой и эспуме из сыра Грано Падано",
+                image: "https://totgoose.github.io/tartar-iz-govyazhey-vyrezki.jpg",
+                history: "Парижские бистро 1920-х. Рубится только ножом, никогда мясорубкой.",
+                facts: "• Мостарда даёт пикантность
+• Эспуме из Грано Падано связывает
+• Подается сразу после нарезки",
+                recipe: "Рубка вырезки ножом → смешивание с мостардой → формовка → эспуме сверху",
+                method: "Рубка + Сборка",
+                origin: "Франция",
+                wine: "Пино Нуар, Божоле",
+                calories: "~290 ккал",
+                time: "15 мин",
+                allergens: "Яйца, Молочные, Горчица"
+            },
+            28: {
+                name: "Севиче из морского гребешка",
+                price: "1850 ₽",
+                details: "Сахалинский гребешок с огурцом, соком юдзу, фенхелем и виноградом",
+                image: "https://totgoose.github.io/seviche-iz-morskogo-grebeshka.jpg",
+                history: "Перуанское наследие. Лайм «готовит» рыбу денатурацией белка.",
+                facts: "• Маринуется 5-7 минут
+• Юдзу даёт цитрусовую кислинку
+• Фенхель и виноград добавляют текстуру",
+                recipe: "Нарезка гребешка → маринад в лайме/юдзу → добавление овощей → подача",
+                method: "Маринование",
+                origin: "Перу",
+                wine: "Альбариньо, Вердиккьо",
+                calories: "~160 ккал",
+                time: "15 мин",
+                allergens: "Моллюски, Цитрусовые"
+            },
+            29: {
+                name: "Тартар из лосося",
+                price: "1350 ₽",
+                details: "С заправкой из Саке и эспуме из Биска",
+                image: "https://totgoose.github.io/tartar-iz-lososya.jpg",
+                history: "Скандинавско-японский фьюжн. Саке усиливает умами и убирает рыбный запах.",
+                facts: "• Лосось замораживается -20°C 24ч
+• Бисковый эспуме даёт насыщенность
+• Заправка из саке и имбиря",
+                recipe: "Нарезка лосося → маринад с саке → эспуме из биска → сборка",
+                method: "Нарезка + Сборка",
+                origin: "Япония/Скандинавия",
+                wine: "Рислинг, Гевюрцтраминер",
+                calories: "~220 ккал",
+                time: "15 мин",
+                allergens: "Рыба, Яйца, Соя"
+            },
+            30: {
+                name: "Волован À la bourguignonne",
+                price: "1450 ₽",
+                details: "Корзинка из слоеного теста с бычьими хвостами в Pinot Noir и сливочным соусом из белых грибов",
+                image: "https://totgoose.github.io/volovan-à-la-bourguignonne.jpg",
+                history: "Французская выпечка XVII в. Тесто поднимается в 7 слоев, создавая «корзину».",
+                facts: "• Бычьи хвосты тушатся 6 часов
+• Сливочный соус из белых грибов
+• Подается горячим",
+                recipe: "Выпечка корзиночек → тушение хвостов в Pinot Noir → соус из грибов → наполнение",
+                method: "Выпечка + Тушение",
+                origin: "Франция",
+                wine: "Пино Нуар, Божоле Виллаж",
+                calories: "~340 ккал",
+                time: "1 ч",
+                allergens: "Глютен, Молочные, Грибы, Сульфиты"
+            },
+            31: {
+                name: "Бюш-Де-Шевр",
+                price: "960 ₽",
+                details: "Жареный козий сыр с плесенью, чатни из хурмы, клубника, инжирная мастарда",
+                image: "https://totgoose.github.io/byush-de-shevr.jpg",
+                history: "Французский сырный деликатес. Чатни из хурмы балансирует кислоту плесени.",
+                facts: "• Козий сыр с белой плесенью
+• Хурма карамелизуется
+• Инжирная мастарда даёт сладость",
+                recipe: "Обжарка сыра → чатни из хурмы → клубника → мастарда → подача",
+                method: "Запекание",
+                origin: "Франция",
+                wine: "Совиньон Блан, Сэмийон",
+                calories: "~280 ккал",
+                time: "20 мин",
+                allergens: "Молочные (плесень), Фрукты"
+            },
+            32: {
+                name: "Киш с крабом",
+                price: "950 ₽",
+                details: "Горячий тарт с морепродуктами и мясом камчатского краба",
+                image: "https://totgoose.github.io/kish-s-krabom.jpg",
+                history: "Лотарингский пирог. Краб добавляет сладость тесту и яйцам.",
+                facts: "• Основа из песочного теста
+• Заливка на основе яиц и сливок
+• Камчатский краб премиум-класса",
+                recipe: "Раскатка теста → начинка из краба → заливка → выпекание 30 мин",
+                method: "Выпечка",
+                origin: "Франция (Лотарингия)",
+                wine: "Шардоне, Пино Блан",
+                calories: "~310 ккал",
+                time: "45 мин",
+                allergens: "Глютен, Яйца, Молочные, Ракообразные"
+            },
+            33: {
+                name: "Стейк из капусты",
+                price: "720 ₽",
+                details: "Жареная капуста с ароматными травами и копченой сметаной",
+                image: "https://totgoose.github.io/steyk-iz-kapusty.jpg",
+                history: "Вегетарианский тренд 2010-х. Копченая сметана дает мясной вкус.",
+                facts: "• Капуста запекается целиком
+• Травы добавляют аромат
+• Сметана даёт умами",
+                recipe: "Нарезка стейков → обжарка → запекание с травами → копченая сметана",
+                method: "Обжарка + Запекание",
+                origin: "Авторская",
+                wine: "Гевюрцтраминер, Рислинг",
+                calories: "~180 ккал",
+                time: "25 мин",
+                allergens: "Молочные"
+            },
+            34: {
+                name: "Французский луковый пирог",
+                price: "650 ₽",
+                details: "Карамелизированный лук шалот на слоеном тесте",
+                image: "https://totgoose.github.io/frantsuzskiy-lukovyy-pirog.jpg",
+                history: "Упрощенная версия супа. Лук шалот слаще обычного и быстрее карамелизуется.",
+                facts: "• Лук тушится 30 мин
+• Слоеное тесто хрустит
+• Подается теплым",
+                recipe: "Карамелизация лука шалота → выкладка на тесто → запекание до золотистости",
+                method: "Карамелизация + Выпечка",
+                origin: "Франция",
+                wine: "Шардоне, Вионье",
+                calories: "~260 ккал",
+                time: "1 ч",
+                allergens: "Глютен, Молочные, Яйца"
+            },
+            35: {
+                name: "Жареная Фуа-гра",
+                price: "2400 ₽",
+                details: "С фундуком, яблоками в меде и соусом из киви и манго",
+                image: "https://totgoose.github.io/zharenaya-fua-gra.jpg",
+                history: "Деликатес эльзасской кухни. Сахар/фрукты убирают жирность.",
+                facts: "• Обжаривается 30 сек/сторона
+• Фундук добавляет хруст
+• Соус из киви и манго освежает",
+                recipe: "Быстрая обжарка → карамелизация фруктов → орехи → соус → подача",
+                method: "Быстрая обжарка",
+                origin: "Франция (Эльзас)",
+                wine: "Сотерн, Токай Асу",
+                calories: "~480 ккал",
+                time: "15 мин",
+                allergens: "Орехи, Фрукты"
+            },
+            36: {
+                name: "Французский луковый суп (запеченный)",
+                price: "650 ₽",
+                details: "По классическому лионскому рецепту",
+                image: "https://totgoose.github.io/frantsuzskiy-lukovyy-sup-zapechennyy.jpg",
+                history: "Парижские рынки XVIII в. Гренки с грюйером — ключ к блюду.",
+                facts: "• Лук карамелизуется 40 мин
+• Грюйер тянется
+• Подается в глиняных мисках",
+                recipe: "Карамелизация лука → добавление бульона и вина → разлив по мискам → гренки с сыром → гратинирование",
+                method: "Карамелизация + Гратинирование",
+                origin: "Франция",
+                wine: "Совиньон Блан, Мюскаде",
+                calories: "~290 ккал",
+                time: "1 ч",
+                allergens: "Глютен, Молочные"
+            },
+            37: {
+                name: "Марсельский суп",
+                price: "1250 ₽",
+                details: "Томатный суп с фенхелем, кальмарами, мидиями, лососем, палтусом и креветками",
+                image: "https://totgoose.github.io/marselskiy-sup.jpg",
+                history: "Прованская уха (Bouillabaisse). Варится из 5 видов рыбы минимум.",
+                facts: "• Рыба закладывается поэтапно
+• Фенхель даёт анисовый вкус
+• Подается с руйем",
+                recipe: "Варка бульона → закладка рыбы/морепродуктов → фенхель/помидоры → подача",
+                method: "Варка",
+                origin: "Франция (Марсель)",
+                wine: "Розе Прованс, Верментино",
+                calories: "~220 ккал",
+                time: "40 мин",
+                allergens: "Рыба, Моллюски, Ракообразные"
+            },
+            38: {
+                name: "Филе-миньон со сморчками",
+                price: "1850 ₽",
+                details: "Говяжья вырезка со сморчками в сливочном соусе и жареным цуккини",
+                image: "https://totgoose.github.io/file-minon-so-smorchkami.jpg",
+                history: "Классика французской высокой кухни. Сморчки содержат микодотин.",
+                facts: "• Вырезка — самый нежный отруб
+• Сливочный соус связывает вкус
+• Цуккини на гриле добавляют легкость",
+                recipe: "Обжарка стейка → тушение сморчков в сливках → подача с гриль-цукини",
+                method: "Обжарка + Тушение",
+                origin: "Франция",
+                wine: "Бордо, Каберне Фран",
+                calories: "~420 ккал",
+                time: "30 мин",
+                allergens: "Грибы, Молочные"
+            },
+            39: {
+                name: "Бефстроганов из говяжьей вырезки",
+                price: "1250 ₽",
+                details: "В сметано-томатном соусе с коньяком, с пюре из батата и битыми огурцами",
+                image: "https://totgoose.github.io/befstroganov-iz-govyazhey-vyrezki.jpg",
+                history: "Назван в честь графа Строганова. Коньяк обязателен в оригинале.",
+                facts: "• Мясо нарезается поперек волокон
+• Сметано-томатный соус
+• Пюре из батата слаще обычного",
+                recipe: "Обжарка мяса → деглазировка коньяком → тушение в сметане и томатах → подача с пюре",
+                method: "Обжарка + Тушение",
+                origin: "Россия",
+                wine: "Каберне Совиньон, Шираз",
+                calories: "~380 ккал",
+                time: "40 мин",
+                allergens: "Молочные"
+            },
+            40: {
+                name: "Лосось",
+                price: "1650 ₽",
+                details: "Филе на коже Medium Rare с жареным картофелем и шпинатом",
+                image: "https://totgoose.github.io/losos.jpg",
+                history: "Скандинавская традиция. Кожа защищает мясо от пересушки.",
+                facts: "• Готовится кожей вниз
+• Шпинат вянет от тепла
+• Картофель хрустит",
+                recipe: "Обжарка на коже до хруста → переворот → отдых → гарнир из картофеля и шпината",
+                method: "Обжарка на коже",
+                origin: "Скандинавия",
+                wine: "Пино Гриджио, Альбариньо",
+                calories: "~310 ккал",
+                time: "20 мин",
+                allergens: "Рыба"
+            },
+            41: {
+                name: "Палтус",
+                price: "1650 ₽",
+                details: "Филе со сливочно-луковым соусом с Мадерой и пастой фрегола",
+                image: "https://totgoose.github.io/paltus.jpg",
+                history: "Северная Атлантика. Мадера дает ореховость.",
+                facts: "• Белое мясо, плотная текстура
+• Паста фрегола впитывает соус
+• Луково-сливочный соус насыщает",
+                recipe: "Обжарка филе → приготовление соуса на мадере → подача с фреголой",
+                method: "Жарка + Соус",
+                origin: "Франция",
+                wine: "Шардоне, Вионье",
+                calories: "~290 ккал",
+                time: "25 мин",
+                allergens: "Рыба, Молочные, Сульфиты"
+            },
+            42: {
+                name: "Морской гребешок",
+                price: "2900 ₽",
+                details: "Жареный с пюре Рамеско Верде и цитрусовой заправкой",
+                image: "https://totgoose.github.io/morskoy-grebeshok.jpg",
+                history: "Средиземноморский деликатес. Готовится 2 минуты с каждой стороны.",
+                facts: "• Не переваривается
+• Пюре Рамеско Верде (брокколи)
+• Цитрусовая заправка освежает",
+                recipe: "Быстрая обжарка на максимуме → пюре брокколи → цитрусовая заправка → подача",
+                method: "Быстрая обжарка",
+                origin: "Франция/Италия",
+                wine: "Совиньон Блан, Пикпуль",
+                calories: "~240 ккал",
+                time: "15 мин",
+                allergens: "Моллюски, Молочные"
+            },
+            43: {
+                name: "Карпаччо из цветной капусты",
+                price: "680 ₽",
+                details: "С трюфельной заправкой, муссом из цветной капусты и миндалем",
+                image: "https://totgoose.github.io/karpachcho-iz-tsvetnoy-kapusty.jpg",
+                history: "Итальянская техника для овощей. Мандолина дает тонкие слайсы.",
+                facts: "• Трюфельная заправка без сливок
+• Мусс из цветной капусты легкий
+• Миндаль даёт хруст",
+                recipe: "Нарезка слайсами → маринование → мусс → миндаль → подача",
+                method: "Нарезка + Маринование",
+                origin: "Италия",
+                wine: "Пино Гриджио, Гави",
+                calories: "~120 ккал",
+                time: "15 мин",
+                allergens: "Орехи (миндаль)"
+            },
+            44: {
+                name: "Карпаччо из свеклы",
+                price: "620 ₽",
+                details: "С соусом «Винегрет», водорослями Нури и кедровыми орешками",
+                image: "https://totgoose.github.io/karpachcho-iz-svekly.jpg",
+                history: "Современная русская кухня. Водоросли нори дают морской вкус.",
+                facts: "• Свекла запекается в фольге
+• Соус винегрет классический
+• Кедровые орешки жирные",
+                recipe: "Запекание свеклы → нарезка → соус винегрет → нори + орехи",
+                method: "Запекание + Нарезка",
+                origin: "Авторская",
+                wine: "Розе, Пино Нуар (легкий)",
+                calories: "~90 ккал",
+                time: "1 ч",
+                allergens: "Орехи"
+            },
+            45: {
+                name: "Ливанский хумус",
+                price: "580 ₽",
+                details: "С маринованным Романо и артишоками",
+                image: "https://totgoose.github.io/livanskiy-khumus-2.jpg",
+                history: "Ближневосточный staple. Нут замачивают на ночь для мягкости.",
+                facts: "• Тахини даёт ореховый вкус
+• Лимон и чеснок балансируют
+• Романо и артишоки добавляют свежесть",
+                recipe: "Варка нута → блендирование с тахини, лимоном, чесноком → выкладка с топпингами",
+                method: "Варка + Блендирование",
+                origin: "Ливан",
+                wine: "Розе, Безалкогольный мохито",
+                calories: "~180 ккал",
+                time: "2 ч",
+                allergens: "Кунжут, Нут"
+            },
+            46: {
+                name: "Большой зеленый салат",
+                price: "950 ₽",
+                details: "Листья салата, авокадо, горошек, брокколи, цуккини кунжутная заправка",
+                image: "https://totgoose.github.io/bolshoy-zelenyy-salat-2.jpg",
+                history: "Современный ЗОЖ-тренд. Кунжутная заправка на базе тахини.",
+                facts: "• Брокколи бланшируется 1 мин
+• Авокадо добавляет сливочность
+• Горошек даёт хруст",
+                recipe: "Нарезка → бланширование брокколи → заправка кунжутным соусом → подача",
+                method: "Нарезка + Сборка",
+                origin: "Авторская",
+                wine: "Совиньон Блан, Грин Вельтлинер",
+                calories: "~150 ккал",
+                time: "10 мин",
+                allergens: "Кунжут"
+            },
+            47: {
+                name: "Суп из чечевицы",
+                price: "650 ₽",
+                details: "С карри на кокосовых сливках, лаймом, мятой и кинзой",
+                image: "https://totgoose.github.io/sup-iz-chechevitsy.jpg",
+                history: "Ближневосточная классика. Кокосовое молоко заменяет сливки.",
+                facts: "• Карри даёт пряность
+• Лайм и кинза освежают
+• Постная альтернатива",
+                recipe: "Обжарка специй → варка чечевицы в кокосовом молоке → лайм/кинза",
+                method: "Варка",
+                origin: "Индия/Ближний Восток",
+                wine: "Безалкогольный, Рислинг",
+                calories: "~180 ккал",
+                time: "40 мин",
+                allergens: "Нет"
+            },
+            48: {
+                name: "Картофельный рости с грибами",
+                price: "850 ₽",
+                details: "Швейцарское блюдо из тертого картофеля с вешенками и постной сметаной",
+                image: "https://totgoose.github.io/kartofelnyy-rosti-s-gribami.jpg",
+                history: "Швейцарское блюдо. Картофель трется на крупной терке.",
+                facts: "• Выжимается вся влага
+• Вешенки тушатся отдельно
+• Постная сметана",
+                recipe: "Тертый картофель → обжарка до корочки → грибы со сметаной → подача",
+                method: "Обжарка",
+                origin: "Швейцария",
+                wine: "Пино Нуар, Гаме",
+                calories: "~240 ккал",
+                time: "30 мин",
+                allergens: "Грибы"
+            },
+            49: {
+                name: "Стейк из капусты",
+                price: "620 ₽",
+                details: "Жареная капуста с травами и постной сметаной",
+                image: "https://totgoose.github.io/steyk-iz-kapusty-2.jpg",
+                history: "Вегетарианский тренд 2010-х. Копченая сметана дает мясной вкус.",
+                facts: "• Капуста запекается целиком
+• Травы добавляют аромат
+• Сметана даёт умами",
+                recipe: "Нарезка стейков → обжарка → запекание с травами → копченая сметана",
+                method: "Обжарка + Запекание",
+                origin: "Авторская",
+                wine: "Гевюрцтраминер, Рислинг",
+                calories: "~180 ккал",
+                time: "25 мин",
+                allergens: "Молочные"
+            },
+            50: {
+                name: "Фетучини с белыми грибами",
+                price: "990 ₽",
+                details: "Соус из уваренных белых грибов и оливкового масла",
+                image: "https://totgoose.github.io/fetuchini-s-belymi-gribami.jpg",
+                history: "Итальянская паста. Белые грибы сушат для концентрации.",
+                facts: "• Тесто из твердых сортов
+• Оливковое масло Extra Virgin
+• Уваренный бульон грибов",
+                recipe: "Варка пасты → соус из уваренных белых грибов и масла → смешивание",
+                method: "Варка + Соус",
+                origin: "Италия",
+                wine: "Кьянти, Санджовезе",
+                calories: "~380 ккал",
+                time: "25 мин",
+                allergens: "Глютен, Грибы"
+            },
+            51: {
+                name: "Пшённая каша",
+                price: "690 ₽",
+                details: "С мускатной тыквой и вялеными томатами",
+                image: "https://totgoose.github.io/pshyonnaya-kasha.jpg",
+                history: "Славянская традиция. Тыква добавляет карамельность.",
+                facts: "• Крупа промывается до чистой воды
+• Тыква запекается отдельно
+• Вяленые томаты дают кислинку",
+                recipe: "Варка пшена → добавление тыквы → тушение → томаты → подача",
+                method: "Варка + Запекание",
+                origin: "Россия",
+                wine: "Безалкогольный",
+                calories: "~150 ккал",
+                time: "30 мин",
+                allergens: "Нет"
+            },
+            52: {
+                name: "Сладкая тыква",
+                price: "750 ₽",
+                details: "Запеченная тыква с соусом Маракуйя и карамелизированным пеканом",
+                image: "https://totgoose.github.io/sladkaya-tykva.jpg",
+                history: "Осенний десерт. Пекан карамелизуется в духовке.",
+                facts: "• Маракуйя даёт тропическую кислинку
+• Тыква выбирается мускатная
+• Запекается с корицей",
+                recipe: "Запекание тыквы → соус маракуйя → карамелизованный пекан",
+                method: "Запекание",
+                origin: "Авторская",
+                wine: "Мускат, Сотерн (десертный)",
+                calories: "~180 ккал",
+                time: "45 мин",
+                allergens: "Орехи"
+            },
+            53: {
+                name: "Crème Brûlée",
+                price: "950 ₽",
+                details: "Классический французский сливочный десерт с Фуа-Гра и клубникой",
+                image: "https://totgoose.github.io/crème-brûlée.jpg",
+                history: "Франция XVII в. Сахарная корка бьется ложкой.",
+                facts: "• Запекается на водяной бане
+• Фуа-гра в рецепте ресторана
+• Горелка создает корку за 10 сек",
+                recipe: "Сливки+ваниль → желтки+сахар → водяная баня 150°C 40 мин → охлаждение → сахар+горелка",
+                method: "Водяная баня + Горелка",
+                origin: "Франция",
+                wine: "Сотерн, Токай Асу",
+                calories: "~320 ккал",
+                time: "4 ч (с охлаждением)",
+                allergens: "Яйца, Молочные"
+            },
+            54: {
+                name: "Бейлиз мильфей",
+                price: "790 ₽",
+                details: "Коржи из бездрожжевого теста с бейлиз-кремом и малиновым соусом",
+                image: "https://totgoose.github.io/beyliz-milfey.jpg",
+                history: "Французский слоеный десерт. Бейлиз дает сливочно-виски вкус.",
+                facts: "• 1000 листов теста
+• Крем на основе ликера
+• Малиновый соус кислит",
+                recipe: "Выпечка теста → крем с бейлиз → сборка слоев → малиновый соус",
+                method: "Выпечка + Сборка",
+                origin: "Франция",
+                wine: "Портвейн, Мадера",
+                calories: "~410 ккал",
+                time: "1.5 ч",
+                allergens: "Глютен, Яйца, Молочные, Алкоголь"
+            },
+            55: {
+                name: "Персиковый тарт с Горгонзолой",
+                price: "760 ₽",
+                details: "Слоёный пирог с персиком в бальзамическом соусе, с ванильным мороженым",
+                image: "https://totgoose.github.io/persikovyy-tart-s-gorgonzoloy.jpg",
+                history: "Итальянский контраст вкусов. Горгонзола плавится с карамелью.",
+                facts: "• Сладкое и соленое
+• Бальзамик уваривается
+• Ванильное мороженое контрастирует",
+                recipe: "Тарт → персики → горгонзола → бальзамик → выпечка → мороженое",
+                method: "Выпечка",
+                origin: "Италия",
+                wine: "Ламбруско, Просекко",
+                calories: "~360 ккал",
+                time: "50 мин",
+                allergens: "Глютен, Молочные (плесень), Яйца"
+            },
+            56: {
+                name: "Лимонад Цитрусовый 300мл",
+                price: "390 ₽",
+                details: "Освежающий прохладительный напиток с ярким кисло-сладким вкусом цитрусовых фруктов. Подаётся охлаждённым, идеально утоляет жажду",
+                image: "https://totgoose.github.io/limonad-tsitrusovyy-300ml.jpg",
+                history: "Изобретен в Париже XVII в. Цедра мацерируется в сиропе.",
+                facts: "• Без красителей
+• Подается со льдом
+• Идеально утоляет жажду",
+                recipe: "Настаивание цедры в сиропе → смешивание с водой/льдом → охлаждение",
+                method: "Настаивание + Охлаждение",
+                origin: "Франция",
+                wine: "-",
+                calories: "~45 ккал",
+                time: "2 ч",
+                allergens: "Нет"
+            },
+            57: {
+                name: "Натуральный ягодный морс",
+                price: "390 ₽",
+                details: "Малина, клубника, чёрная смородина",
+                image: "https://totgoose.github.io/naturalnyy-yagodnyy-mors.jpg",
+                history: "Древнерусский напиток. Ягоды не варят, а мнут.",
+                facts: "• Сохраняет витамин С
+• Малина, клубника, смородина
+• Без консервантов",
+                recipe: "Отжим ягод → смешивание с водой/сахаром → настаивание → охлаждение",
+                method: "Отжим + Настаивание",
+                origin: "Россия",
+                wine: "-",
+                calories: "~60 ккал",
+                time: "30 мин",
+                allergens: "Нет"
+            },
+            58: {
+                name: "Вода «Sairme» 0,5л",
+                price: "300 ₽",
+                details: "Без газа / с газом",
+                image: "https://totgoose.github.io/voda-sairme-05l.jpg",
+                history: "Грузинская минералка. Бальнеологический курорт.",
+                facts: "• Лечебные свойства
+• Газ/без газа
+• Природная чистота",
+                recipe: "Розлив из источника",
+                method: "Розлив",
+                origin: "Грузия",
+                wine: "-",
+                calories: "0 ккал",
+                time: "-",
+                allergens: "Нет"
+            },
+            59: {
+                name: "Черный",
+                price: "450 ₽",
+                details: "Классический крепкий чай с насыщенным вкусом и ароматом",
+                image: "https://totgoose.github.io/chernyy.jpg",
+                history: "Традиции Китая/Индии. 900мл рассчитан на компанию.",
+                facts: "• Заваривается в чайнике
+• Температура 85-100°C
+• Повторное заваривание до 3 раз",
+                recipe: "Заваривание 5-7 мин в горячей воде → подача в чайнике",
+                method: "Заваривание",
+                origin: "Китай/Тайвань/Индия",
+                wine: "-",
+                calories: "~2-5 ккал",
+                time: "5 мин",
+                allergens: "Нет"
+            },
+            60: {
+                name: "Зеленый сенча",
+                price: "450 ₽",
+                details: "Японский зелёный чай с травянистым вкусом и лёгкой терпкостью",
+                image: "https://totgoose.github.io/zelenyy-sencha.jpg",
+                history: "Традиции Китая/Индии. 900мл рассчитан на компанию.",
+                facts: "• Заваривается в чайнике
+• Температура 85-100°C
+• Повторное заваривание до 3 раз",
+                recipe: "Заваривание 5-7 мин в горячей воде → подача в чайнике",
+                method: "Заваривание",
+                origin: "Китай/Тайвань/Индия",
+                wine: "-",
+                calories: "~2-5 ккал",
+                time: "5 мин",
+                allergens: "Нет"
+            },
+            61: {
+                name: "Зеленый с жасмином",
+                price: "450 ₽",
+                details: "Нежный зелёный чай с цветочным ароматом жасмина",
+                image: "https://totgoose.github.io/zelenyy-s-zhasminom.jpg",
+                history: "Традиции Китая/Индии. 900мл рассчитан на компанию.",
+                facts: "• Заваривается в чайнике
+• Температура 85-100°C
+• Повторное заваривание до 3 раз",
+                recipe: "Заваривание 5-7 мин в горячей воде → подача в чайнике",
+                method: "Заваривание",
+                origin: "Китай/Тайвань/Индия",
+                wine: "-",
+                calories: "~2-5 ккал",
+                time: "5 мин",
+                allergens: "Нет"
+            },
+            62: {
+                name: "Молочный улун",
+                price: "450 ₽",
+                details: "Полуферментированный тайваньский чай с кремовым послевкусием",
+                image: "https://totgoose.github.io/molochnyy-ulun.jpg",
+                history: "Традиции Китая/Индии. 900мл рассчитан на компанию.",
+                facts: "• Заваривается в чайнике
+• Температура 85-100°C
+• Повторное заваривание до 3 раз",
+                recipe: "Заваривание 5-7 мин в горячей воде → подача в чайнике",
+                method: "Заваривание",
+                origin: "Китай/Тайвань/Индия",
+                wine: "-",
+                calories: "~2-5 ккал",
+                time: "5 мин",
+                allergens: "Нет"
+            },
+            63: {
+                name: "Бергамот",
+                price: "450 ₽",
+                details: "Чёрный чай с цитрусовой ноткой бергамота (Эрл Грей)",
+                image: "https://totgoose.github.io/bergamot.jpg",
+                history: "Традиции Китая/Индии. 900мл рассчитан на компанию.",
+                facts: "• Заваривается в чайнике
+• Температура 85-100°C
+• Повторное заваривание до 3 раз",
+                recipe: "Заваривание 5-7 мин в горячей воде → подача в чайнике",
+                method: "Заваривание",
+                origin: "Китай/Тайвань/Индия",
+                wine: "-",
+                calories: "~2-5 ккал",
+                time: "5 мин",
+                allergens: "Нет"
+            },
+            64: {
+                name: "Травяной",
+                price: "450 ₽",
+                details: "Сбор из лекарственных трав без кофеина",
+                image: "https://totgoose.github.io/travyanoy.jpg",
+                history: "Традиции Китая/Индии. 900мл рассчитан на компанию.",
+                facts: "• Заваривается в чайнике
+• Температура 85-100°C
+• Повторное заваривание до 3 раз",
+                recipe: "Заваривание 5-7 мин в горячей воде → подача в чайнике",
+                method: "Заваривание",
+                origin: "Китай/Тайвань/Индия",
+                wine: "-",
+                calories: "~2-5 ккал",
+                time: "5 мин",
+                allergens: "Нет"
+            },
+            65: {
+                name: "Клюквенный",
+                price: "950 ₽",
+                details: "Ягодный чай с кисло-сладким вкусом клюквы",
+                image: "https://totgoose.github.io/klyukvennyy.jpg",
+                history: "Традиции Китая/Индии. 900мл рассчитан на компанию.",
+                facts: "• Заваривается в чайнике
+• Температура 85-100°C
+• Повторное заваривание до 3 раз",
+                recipe: "Заваривание 5-7 мин в горячей воде → подача в чайнике",
+                method: "Заваривание",
+                origin: "Китай/Тайвань/Индия",
+                wine: "-",
+                calories: "~2-5 ккал",
+                time: "5 мин",
+                allergens: "Нет"
+            },
+            66: {
+                name: "Американо, эспрессо",
+                price: "250 ₽",
+                details: "Arabica",
+                image: "https://totgoose.github.io/amerikano-espresso.jpg",
+                history: "Эфиопское происхождение. Arabica 100%.",
+                facts: "• Давление 9 бар
+• Помол средний/мелкий
+• Молоко any milk",
+                recipe: "Помол → темперовка → экстракция 25-30 сек → подача/взбивание молока",
+                method: "Эспрессо-машина",
+                origin: "Италия/Эфиопия",
+                wine: "-",
+                calories: "~5-150 ккал",
+                time: "2 мин",
+                allergens: "Нет/Молочные"
+            },
+            67: {
+                name: "Капучино, двойной эспрессо",
+                price: "450 ₽",
+                details: "Arabica  + Any Milk",
+                image: "https://totgoose.github.io/kapuchino-dvoynoy-espresso.jpg",
+                history: "Эфиопское происхождение. Arabica 100%.",
+                facts: "• Давление 9 бар
+• Помол средний/мелкий
+• Молоко any milk",
+                recipe: "Помол → темперовка → экстракция 25-30 сек → подача/взбивание молока",
+                method: "Эспрессо-машина",
+                origin: "Италия/Эфиопия",
+                wine: "-",
+                calories: "~5-150 ккал",
+                time: "2 мин",
+                allergens: "Нет/Молочные"
+            },
+            68: {
+                name: "Латте",
+                price: "550 ₽",
+                details: "Arabica  + Any Milk",
+                image: "https://totgoose.github.io/latte.jpg",
+                history: "Эфиопское происхождение. Arabica 100%.",
+                facts: "• Давление 9 бар
+• Помол средний/мелкий
+• Молоко any milk",
+                recipe: "Помол → темперовка → экстракция 25-30 сек → подача/взбивание молока",
+                method: "Эспрессо-машина",
+                origin: "Италия/Эфиопия",
+                wine: "-",
+                calories: "~5-150 ккал",
+                time: "2 мин",
+                allergens: "Нет/Молочные"
+            },
+        };
+
+        // Navigation filtering
+        const navBtns = document.querySelectorAll('.nav-btn');
+        const sections = document.querySelectorAll('.section');
+
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                navBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const targetSection = btn.dataset.section;
+
+                sections.forEach(section => {
+                    if (targetSection === 'all') {
+                        section.style.display = 'block';
+                    } else {
+                        const sectionId = 'section-' + targetSection.replace(/\s/g, '-').replace(/"/g, '');
+                        if (section.id === sectionId) {
+                            section.style.display = 'block';
+                            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Modal functions
+        function openModal(id) {
+            const dish = menuData[id];
+            if (!dish) return;
+
+            document.getElementById('modal-image').src = dish.image;
+            document.getElementById('modal-image').alt = dish.name;
+            document.getElementById('modal-title').textContent = dish.name;
+            document.getElementById('modal-price').textContent = dish.price;
+            document.getElementById('modal-details').textContent = dish.details;
+
+            // Info grid
+            const infoGrid = document.getElementById('modal-info');
+            let infoHTML = '';
+
+            if (dish.method) {
+                infoHTML += `<div class="modal-info-item"><div class="modal-info-label">Способ приготовления</div><div class="modal-info-value">${dish.method}</div></div>`;
+            }
+            if (dish.origin) {
+                infoHTML += `<div class="modal-info-item"><div class="modal-info-label">Происхождение</div><div class="modal-info-value">${dish.origin}</div></div>`;
+            }
+            if (dish.wine) {
+                infoHTML += `<div class="modal-info-item"><div class="modal-info-label">Сочетание с вином</div><div class="modal-info-value">${dish.wine}</div></div>`;
+            }
+            if (dish.calories) {
+                infoHTML += `<div class="modal-info-item"><div class="modal-info-label">Калорийность</div><div class="modal-info-value">${dish.calories}</div></div>`;
+            }
+            if (dish.time) {
+                infoHTML += `<div class="modal-info-item"><div class="modal-info-label">Время приготовления</div><div class="modal-info-value">${dish.time}</div></div>`;
+            }
+            if (dish.allergens && dish.allergens !== 'Нет') {
+                infoHTML += `<div class="modal-info-item"><div class="modal-info-label">Аллергены</div><div class="modal-info-value">${dish.allergens}</div></div>`;
+            }
+
+            infoGrid.innerHTML = infoHTML;
+
+            // History
+            const historySection = document.getElementById('modal-history-section');
+            if (dish.history) {
+                document.getElementById('modal-history').textContent = dish.history;
+                historySection.style.display = 'block';
+            } else {
+                historySection.style.display = 'none';
+            }
+
+            // Facts
+            const factsSection = document.getElementById('modal-facts-section');
+            if (dish.facts) {
+                const factsList = dish.facts.split('•').filter(f => f.trim()).map(f => `<li>${f.trim()}</li>`).join('');
+                document.getElementById('modal-facts').innerHTML = factsList;
+                factsSection.style.display = 'block';
+            } else {
+                factsSection.style.display = 'none';
+            }
+
+            // Recipe
+            const recipeSection = document.getElementById('modal-recipe-section');
+            if (dish.recipe) {
+                document.getElementById('modal-recipe').textContent = dish.recipe;
+                recipeSection.style.display = 'block';
+            } else {
+                recipeSection.style.display = 'none';
+            }
+
+            document.getElementById('modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (!event || event.target.id === 'modal') {
+                document.getElementById('modal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
